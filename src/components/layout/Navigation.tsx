@@ -12,7 +12,7 @@ export const Navigation = ({ darkMode, toggleTheme }: NavigationProps) => {
   return (
     <nav className="fixed top-0 w-full z-40 px-6 py-6 flex justify-between items-center bg-white/50 dark:bg-zinc-950/50 backdrop-blur-md transition-colors duration-500 border-b border-zinc-200 dark:border-white/5">
       <a href="#" className="text-xl font-bold tracking-tighter hover:italic transition-all text-zinc-900 dark:text-white">
-        <span className="font-serif font-normal text-purple-600 dark:text-purple-300">.design</span>
+        Mya <span className="font-serif font-normal text-purple-600 dark:text-purple-300">.portfolio</span>
       </a>
       
       <div className="flex items-center gap-8">
