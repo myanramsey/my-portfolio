@@ -8,9 +8,8 @@ export const Hero = () => {
           /// Portfolio 2024-2025
         </div>
         
-        {/* Main Hero Content - Updated grid cols to bring image closer */}
+        {/* Main Hero Content*/}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-12">
-            {/* Text takes up less space now (7 cols instead of 8) */}
             <div className="lg:col-span-7">
                 <h1 className="text-6xl md:text-8xl lg:text-9xl font-serif leading-[0.9] text-zinc-900 dark:text-white mix-blend-exclusion transition-colors duration-500">
                 Data <span className="italic text-zinc-400/50">&</span> <br/>
@@ -18,11 +17,11 @@ export const Hero = () => {
                 </h1>
             </div>
             
-            {/* Hero Image - Moved to col-span-5 to shift left */}
+            {/* Hero Image */}
             <div className="lg:col-span-5 hidden lg:block">
                  <div className="aspect-[3/4] w-full max-w-sm mr-auto bg-zinc-200 dark:bg-zinc-800 rounded-lg overflow-hidden relative rotate-3 hover:rotate-0 transition-all duration-500">
                     <img 
-                        src="public/headshot.jpg" 
+                        src="https://github.com/myanramsey/my-portfolio/blob/main/public/headshot.jpg?raw=true" 
                         alt="Portrait" 
                         className="object-cover w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
                     />
