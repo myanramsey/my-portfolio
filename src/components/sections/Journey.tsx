@@ -11,20 +11,27 @@ export const Journey = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
           <div className="space-y-6">
             <h3 className="font-mono text-purple-600 dark:text-purple-400 uppercase tracking-widest text-sm mb-8 transition-colors duration-500">[ Education & Skills ]</h3>
-            
+
             <div className="bg-white dark:bg-zinc-900/50 p-8 border border-zinc-200 dark:border-white/5 hover:border-purple-500/30 transition-colors shadow-sm dark:shadow-none">
               <GraduationCap className="text-zinc-900 dark:text-white mb-4" size={32} />
-              <h4 className="text-xl font-bold text-zinc-900 dark:text-white mb-2">University of Technology</h4>
-              <p className="text-zinc-500 dark:text-zinc-400 mb-6 font-serif italic">B.S. Comp Sci + B.A. Studio Art</p>
-              
+              <h4 className="text-xl font-bold text-zinc-900 dark:text-white mb-2">University of Florida</h4>
+              <p className="text-zinc-500 dark:text-zinc-400 mb-2 font-serif italic">B.S. in Digital Arts and Sciences</p>
+              <p className="text-xs text-zinc-400 mb-4">Herbert Wertheim College of Engineering</p>
+              <p className="text-sm text-zinc-600 dark:text-zinc-300 mb-4">GPA: 3.51/4.0 • GDC ColorStack Scholarship (2025)</p>
+              <p className="text-xs text-zinc-500 dark:text-zinc-400 mb-6 italic">An interdisciplinary degree combining computer science, visual design, and creative technology to develop innovative solutions at the intersection of art and engineering.</p>
+
               <div className="space-y-4">
                 <div>
                   <span className="text-xs font-mono text-zinc-400 block mb-2">LANGUAGES</span>
-                  <p className="text-sm text-zinc-600 dark:text-zinc-300">Python, Java, TypeScript, C++, GLSL, SQL</p>
+                  <p className="text-sm text-zinc-600 dark:text-zinc-300">Python, C++, Java, JavaScript, SQL, HTML/CSS</p>
                 </div>
                 <div>
-                  <span className="text-xs font-mono text-zinc-400 block mb-2">CREATIVE</span>
-                  <p className="text-sm text-zinc-600 dark:text-zinc-300">Figma, Adobe Suite, Blender, TouchDesigner</p>
+                  <span className="text-xs font-mono text-zinc-400 block mb-2">DATA & FRAMEWORKS</span>
+                  <p className="text-sm text-zinc-600 dark:text-zinc-300">Pandas, NumPy, GeoPandas, React, Node.js, MERN Stack, REST APIs</p>
+                </div>
+                <div>
+                  <span className="text-xs font-mono text-zinc-400 block mb-2">TOOLS & CREATIVE</span>
+                  <p className="text-sm text-zinc-600 dark:text-zinc-300">Git, Unity, Blender, Arduino, Autodesk, Figma, GitHub Copilot</p>
                 </div>
               </div>
             </div>
@@ -32,7 +39,7 @@ export const Journey = () => {
 
           <div className="space-y-6">
             <h3 className="font-mono text-purple-600 dark:text-purple-400 uppercase tracking-widest text-sm mb-8 transition-colors duration-500">[ Experience ]</h3>
-            
+
             {timeline.filter(t => t.type === 'extracurricular').map((item) => (
               <div key={item.id} className="border-l border-zinc-300 dark:border-white/10 pl-6 pb-8 last:pb-0 relative">
                 <div className="absolute -left-[5px] top-0 w-2.5 h-2.5 bg-zinc-400 dark:bg-zinc-800 rounded-full border border-zinc-200 dark:border-zinc-600"></div>
