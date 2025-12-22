@@ -81,32 +81,47 @@ export const projects: Project[] = [
   },
 
   // ==================== INNOVATION PROJECTS (COMBINED) ====================
-  {
-    id: 5,
-    title: "Design Thinking & Innovation Portfolio",
-    category: "Design",
-    tags: ["Design Thinking", "Arduino", "3D Modeling", "IoT", "Sustainability", "Product Design", "Team Collaboration"],
-    year: "2022-2025",
-    shortDescription: "A collection of 5 innovation projects demonstrating complete design thinking process from problem discovery through prototyping.",
-    fullDescription: "This portfolio showcases comprehensive design thinking and innovation skills developed through coursework and team projects. Each project follows the complete innovation lifecycle: problem discovery, user research, ideation, prototyping, and impact analysis. Projects span sustainable systems design, IoT hardware, 3D modeling, and accessibility solutions.",
-    process: [
-      "Problem Discovery & Research: Conducted stakeholder interviews, literature reviews, and field observations to identify real-world challenges across sustainability, travel, accessibility, and everyday convenience domains.",
-      "Design Thinking Application: Applied 'How Might We' statements, value proposition frameworks, and user-centered design principles to transform problems into actionable innovation opportunities.",
-      "Technical Prototyping: Built functional prototypes using diverse technologies including Arduino microcontrollers, Fusion 360 CAD software, sustainable materials, and multi-floor system designs.",
-      "Impact Validation: Measured outcomes including 80% nutrient recovery rates, 30% crop yield increases, and enhanced accessibility for 500+ building occupants across various projects."
-    ],
-    challenge: "Developing solutions that balance technical feasibility, user needs, sustainability, and real-world constraints while working both independently and in multidisciplinary teams across diverse problem domains.",
-    solution: "Created 5 distinct innovations: URE-KA (circular economy wastewater system), PAAMS (airport security scanner), Mya.Larm (Arduino door alert), KOSS Isolation Module (3D-printed headphone accessory), and Maynooth Bridge (accessibility redesign). Each demonstrates end-to-end problem-solving from research through working prototypes.",
-    image: "from-violet-700 to-purple-900",
-    size: 'large',
-    gallery: [
-      "/projects/ure-ka-poster.jpg",
-      "/projects/paams-prototype.jpg",
-      "/projects/myalarm-prototype.jpg",
-      "/projects/koss-technical-drawing.jpg",
-      "/projects/maynooth-plan.jpg"
-    ]
-  }
+{
+  id: 5,
+  title: "Innovation Academy Journey",
+  category: "Design",
+  tags: [
+    "Innovation Academy",
+    "Study Abroad",
+    "Design Thinking",
+    "Ireland",
+    "UF",
+    "Learning Journey"
+  ],
+  year: "2022–2025",
+  shortDescription:
+    "How starting with UF’s Innovation Academy and a study abroad in Ireland taught me design thinking before computer science, shaping how I approach every project.",
+  fullDescription:
+    "Learned about the whole design thinking process—empathize, define, ideate, prototype, test—through hands-on projects in UF’s Innovation Academy and a study abroad in Ireland. This human-centered approach became the foundation for all my subsequent work in computer science and data projects.",
+  process: [
+    "Reluctant start in Innovation Academy: Entered UF’s Innovation Academy with doubts about the non-traditional spring–summer schedule and how an innovation minor would support a CS-focused career, but decided to treat it as an experiment in learning.[conversation_history:1]",
+    "Taking a chance on Ireland: Chose to do my first Innovation Academy course on a study abroad program in Ireland, before any formal CS classes, and committed to approaching it as a chance to learn how innovators think and work.[file:3]",
+    "Learning design thinking first: Immersed in the design thinking process—empathize, define, ideate, prototype, test—by working on real problems faced by travelers and students, from confusing airport security rules to inaccessible campus infrastructure.[file:3][web:1]",
+    "Project-based skill building: Developed user empathy, problem framing with “How might we…?” statements, rapid prototyping with cardboard, recycled materials, Arduino kits, and Fusion 360, and collaborative iteration across projects such as PAAMS, Mya.Larm, a KOSS isolation module, and a Maynooth bridge accessibility concept.[file:3][file:6][file:7][file:8]",
+    "Reinforcing at system scale with URE-KA: Applied the same design thinking toolkit to the URE-KA project, focusing on nutrient recovery and sustainability, which required systems thinking, stakeholder analysis, and impact-focused storytelling rather than a single gadget.[attached_image:1]",
+    "Carrying the mindset into CS: Brought this design-first foundation into later CS and data projects, using empathy, clear problem framing, prototyping, and iteration to guide how code, data pipelines, and interfaces are designed and evaluated.[conversation_history:1]"
+  ],
+  challenge:
+    "Starting in an innovation-focused program with an unconventional schedule, abroad, before any CS coursework made it unclear how this path would meaningfully support a technical career. The core challenge was turning that uncertainty into an advantage rather than a distraction.[conversation_history:1]",
+  solution:
+    "Leaning into UF’s Innovation Academy and the Ireland study abroad as a laboratory for learning design thinking first. By repeatedly applying empathize–define–ideate–prototype–test across multiple projects and then reinforcing those skills with the larger URE-KA system, this journey transformed an initially reluctant enrollment into a durable, human-centered problem-solving foundation for all future data and engineering work.[file:3][file:6][file:7][file:8][attached_image:1]",
+  image: "from-violet-700 to-purple-900",
+  size: "large",
+  gallery: [
+    "/projects/innovation-journey-hero.jpg",   // study abroad / collage
+    "/projects/paams-prototype.jpg",
+    "/projects/myalarm-prototype.jpg",
+    "/projects/koss-technical-drawing.jpg",
+    "/projects/maynooth-plan.jpg",
+    "/projects/ure-ka-poster.jpg"
+  ]
+}
+
 ];
 
 // ==================== TIMELINE ====================
