@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { Navigation } from './components/layout/Navigation';
 import { Hero } from './components/sections/Hero';
 import { Work } from './components/sections/Work';
@@ -36,6 +37,8 @@ const App = () => {
             onClose={() => setSelectedProject(null)} 
           />
         )}
+
+        <Analytics />
       </div>
     </div>
   );
