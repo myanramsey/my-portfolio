@@ -81,44 +81,97 @@ export const projects: Project[] = [
   },
 
   // ==================== INNOVATION PROJECTS (COMBINED) ====================
-{
+  {
   id: 5,
   title: "Innovation Academy Journey",
   category: "Design",
   tags: [
-    "Innovation Academy",
-    "Study Abroad",
     "Design Thinking",
+    "Fusion 360",
+    "Prototyping",
+    "User Research",
+    "Figma",
     "Ireland",
-    "UF",
-    "Learning Journey"
+    "UF Innovation Academy"
   ],
   year: "2022–2025",
+  
   shortDescription:
-    "How starting with UF’s Innovation Academy and a study abroad in Ireland taught me design thinking before computer science, shaping how I approach every project.",
+    "How studying design thinking in Ireland before any CS coursework taught me to solve problems through empathy, prototyping, and iteration—skills that now shape every technical project I build.",
+  
   fullDescription:
-    "Learned about the whole design thinking process—empathize, define, ideate, prototype, test—through hands-on projects in UF’s Innovation Academy and a study abroad in Ireland. This human-centered approach became the foundation for all my subsequent work in computer science and data projects.",
-  process: [
-    "Reluctant start in Innovation Academy: Entered UF’s Innovation Academy with doubts about the non-traditional spring–summer schedule and how an innovation minor would support a CS-focused career, but decided to treat it as an experiment in learning.[conversation_history:1]",
-    "Taking a chance on Ireland: Chose to do my first Innovation Academy course on a study abroad program in Ireland, before any formal CS classes, and committed to approaching it as a chance to learn how innovators think and work.[file:3]",
-    "Learning design thinking first: Immersed in the design thinking process—empathize, define, ideate, prototype, test—by working on real problems faced by travelers and students, from confusing airport security rules to inaccessible campus infrastructure.[file:3][web:1]",
-    "Project-based skill building: Developed user empathy, problem framing with “How might we…?” statements, rapid prototyping with cardboard, recycled materials, Arduino kits, and Fusion 360, and collaborative iteration across projects such as PAAMS, Mya.Larm, a KOSS isolation module, and a Maynooth bridge accessibility concept.[file:3][file:6][file:7][file:8]",
-    "Reinforcing at system scale with URE-KA: Applied the same design thinking toolkit to the URE-KA project, focusing on nutrient recovery and sustainability, which required systems thinking, stakeholder analysis, and impact-focused storytelling rather than a single gadget.[attached_image:1]",
-    "Carrying the mindset into CS: Brought this design-first foundation into later CS and data projects, using empathy, clear problem framing, prototyping, and iteration to guide how code, data pipelines, and interfaces are designed and evaluated.[conversation_history:1]"
-  ],
+    "I started UF's Innovation Academy uncertain about the non-traditional path, but studying abroad in Ireland for my first semester taught me the design thinking process—empathize, define, ideate, prototype, test—before I wrote a single line of code. Through hands-on projects tackling real travel, accessibility, and sustainability challenges, I learned to build solutions that put users first.",
+
   challenge:
-    "Starting in an innovation-focused program with an unconventional schedule, abroad, before any CS coursework made it unclear how this path would meaningfully support a technical career. The core challenge was turning that uncertainty into an advantage rather than a distraction.[conversation_history:1]",
+    "Starting in an innovation-focused program with an unconventional schedule, abroad, before any CS coursework made it unclear how this path would support a technical career. Could design thinking skills translate to computer science and data engineering work?",
+
   solution:
-    "Leaning into UF’s Innovation Academy and the Ireland study abroad as a laboratory for learning design thinking first. By repeatedly applying empathize–define–ideate–prototype–test across multiple projects and then reinforcing those skills with the larger URE-KA system, this journey transformed an initially reluctant enrollment into a durable, human-centered problem-solving foundation for all future data and engineering work.[file:3][file:6][file:7][file:8][attached_image:1]",
+    "Treating Innovation Academy as a laboratory for human-centered problem-solving. By applying the design thinking framework across multiple real-world projects—from smart luggage to accessibility solutions—I built a foundation in empathy, prototyping, and iteration that now guides how I approach every CS and data project, from code architecture to interface design.",
+
+  process: [
+    {
+      text: "Took a chance on Ireland: Committed to studying abroad for my first Innovation Academy semester before any formal CS classes, approaching it as an experiment in learning how innovators think and solve problems.",
+      images: [
+        "/projects/innovation-journey/ireland-arrival.jpg",
+        "/projects/innovation-journey/maynooth-campus.jpg"
+      ]
+    },
+    
+    {
+      text: "PAAMS - Smart Luggage Solution: Led the design process as Chief Design Officer for a smart suitcase with integrated sensors that scan contents for prohibited items before travelers reach airport security. Ran rapid 'Crazy Eights' ideation sessions with my team, built physical prototypes, and managed the lifecycle from hardware constraints to digital UX. Learned end-to-end product design, 3D CAD (Fusion 360), hybrid hardware/software UX, and design leadership.",
+      images: [
+        "/projects/innovation-journey/paams-prototype.jpg",
+        "/projects/innovation-journey/paams-crazy-eights.jpg",
+        "/projects/innovation-journey/paams-team-work.jpg"
+      ]
+    },
+    
+    {
+      text: "TravHelp - Anxiety-Free Travel App: Created a mobile app that consolidates tickets, weather, navigation, and mental health check-ins into one interface for the 25% of travelers who experience anxiety. Designed features like 'Nearest Restroom' locator and 'Calm Zone' finder to de-escalate high-stress moments. Developed skills in information architecture, user-centric design, and low-to-high fidelity prototyping.",
+      images: [
+        "/projects/innovation-journey/travhelp-screens.jpg",
+        "/projects/innovation-journey/travhelp-wireframes.jpg"
+      ]
+    },
+    
+    {
+      text: "KOSS Pro Modification - Acoustic Shield Design: Developed a custom detachable acoustic shield to eliminate sound leakage from Koss Porta Pro headphones. Started with hand-drawn orthographic sketches, modeled in Fusion 360, and created technical engineering drawings with precise measurements. Learned 3D modeling, technical drafting, CAD engineering, and design for manufacturing.",
+      images: [
+        "/projects/innovation-journey/koss-technical-drawing.jpg",
+        "/projects/innovation-journey/koss-prototype.jpg",
+        "/projects/innovation-journey/koss-sketches.jpg"
+      ]
+    },
+    
+    {
+      text: "URE-KA - Nutrient Recovery System: Applied design thinking to system-scale sustainability challenges, requiring stakeholder analysis, systems mapping, and impact-focused communication beyond single-product solutions. Learned to think about complex environmental problems holistically.",
+      images: [
+        "/projects/innovation-journey/ure-ka-poster.jpg",
+        "/projects/innovation-journey/ure-ka-presentation.jpg"
+      ]
+    },
+    
+    {
+      text: "Explored Ireland beyond projects: Discovered through traveling to the Cliffs of Moher, Dublin streets, and Galway Bay that life doesn't follow a set timeline. Connected with inspiring mentors like Sierra Calhoun-Pollard, Ph.D., whose cross-disciplinary approach to innovation continues to shape how I work. My study abroad classmates became my rock throughout UF—proving that the best part of innovation is the community you build.",
+      images: [
+        "/projects/innovation-journey/ireland-cliffs-moher.jpg",
+        "/projects/innovation-journey/dublin-exploration.jpg",
+        "/projects/innovation-journey/classmates-group.jpg",
+        "/projects/innovation-journey/galway-sunset.jpg"
+      ]
+    },
+    
+    "Carried the foundation into CS work: Now approach code, data pipelines, and interfaces with the same empathy-first mindset. Always ask 'Who am I building for?' and 'Why does it matter?' before diving into technical implementation. Design thinking transformed from an uncertain experiment into the core of how I solve problems."
+  ],
+
   image: "from-violet-700 to-purple-900",
   size: "large",
+
   gallery: [
-    "/projects/innovation-journey-hero.jpg",   // study abroad / collage
-    "/projects/paams-prototype.jpg",
-    "/projects/myalarm-prototype.jpg",
-    "/projects/koss-technical-drawing.jpg",
-    "/projects/maynooth-plan.jpg",
-    "/projects/ure-ka-poster.jpg"
+    "/projects/innovation-journey/hero-ireland-collage.jpg",
+    "/projects/innovation-journey/workshop-prototyping.jpg",
+    "/projects/innovation-journey/team-collaboration.jpg",
+    "/projects/innovation-journey/final-presentations.jpg"
   ]
 }
 

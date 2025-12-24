@@ -23,7 +23,7 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
         <div className={`w-full h-64 md:h-96 shrink-0 bg-gradient-to-br ${project.image} relative`}>
           <button 
             onClick={onClose}
-            className="absolute top-6 right-6 p-2 bg-black/20 hover:bg-black/40 text-white rounded-full backdrop-blur-md transition-colors"
+            className="absolute top-6 right-6 p-2 bg-black/20 hover:bg-black/40 text-white rounded-full backdrop-blur-md transition-colors z-10"
           >
             <X size={24} />
           </button>
@@ -38,77 +38,149 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
         </div>
 
         {/* Modal Content */}
-        <div className="p-8 md:p-12 grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div className="p-8 md:p-12 space-y-12">
           
-          {/* Sidebar Info */}
-          <div className="lg:col-span-4 space-y-8">
-            <div>
-              <h3 className="font-mono text-xs uppercase tracking-widest text-zinc-500 mb-3">Tech Stack</h3>
-              <div className="flex flex-wrap gap-2">
-                {project.tags.map(tag => (
-                  <span key={tag} className="px-3 py-1 bg-zinc-200 dark:bg-white/5 text-zinc-800 dark:text-zinc-300 text-xs font-mono rounded-full border border-zinc-300 dark:border-white/10">
-                    {tag}
-                  </span>
-                ))}
-              </div>
+          {/* Hero Description - Full Width */}
+          <div className="max-w-4xl">
+            <p className="text-xl md:text-2xl leading-relaxed font-light text-zinc-800 dark:text-zinc-300 border-l-4 border-purple-500 pl-6">
+              {project.fullDescription}
+            </p>
+          </div>
+
+          {/* Challenge & Solution - Prominent Cards */}
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-950/30 dark:to-purple-900/20 p-8 rounded-xl border-2 border-purple-200 dark:border-purple-800/50 shadow-lg">
+              <h3 className="font-bold text-xl mb-4 text-zinc-900 dark:text-white flex items-center gap-3">
+                <div className="p-2 bg-purple-500 rounded-lg">
+                  <Terminal size={20} className="text-white"/>
+                </div>
+                The Challenge
+              </h3>
+              <p className="text-base leading-relaxed text-zinc-700 dark:text-zinc-300">{project.challenge}</p>
             </div>
             
-            <div>
-              <h3 className="font-mono text-xs uppercase tracking-widest text-zinc-500 mb-3">Links</h3>
-              <div className="flex flex-col gap-2">
-                <a href="#" className="flex items-center gap-2 text-purple-600 dark:text-purple-400 hover:underline">
-                  <Github size={16} /> View Source Code
-                </a>
-                <a href="#" className="flex items-center gap-2 text-purple-600 dark:text-purple-400 hover:underline">
-                  <ArrowUpRight size={16} /> Live Demo
-                </a>
-              </div>
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-950/30 dark:to-blue-900/20 p-8 rounded-xl border-2 border-blue-200 dark:border-blue-800/50 shadow-lg">
+              <h3 className="font-bold text-xl mb-4 text-zinc-900 dark:text-white flex items-center gap-3">
+                <div className="p-2 bg-blue-500 rounded-lg">
+                  <Layers size={20} className="text-white"/>
+                </div>
+                The Solution
+              </h3>
+              <p className="text-base leading-relaxed text-zinc-700 dark:text-zinc-300">{project.solution}</p>
             </div>
           </div>
 
-          {/* Main Content */}
-          <div className="lg:col-span-8 space-y-10 text-zinc-800 dark:text-zinc-300">
-            <div className="space-y-8">
-              <p className="text-xl md:text-2xl leading-relaxed font-light border-l-2 border-purple-500 pl-6">
-                {project.fullDescription}
-              </p>
-
-              {project.process && (
-                <div className="space-y-4">
-                  <h3 className="font-mono text-xs uppercase tracking-widest text-zinc-500 mb-4">The Process</h3>
-                  {project.process.map((paragraph, idx) => (
-                    <p key={idx} className="text-lg leading-relaxed text-zinc-700 dark:text-zinc-300">
-                      {paragraph}
-                    </p>
+          {/* Two Column Layout: Sidebar + Main Content */}
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            
+            {/* Sidebar Info */}
+            <div className="lg:col-span-4 space-y-8">
+              <div>
+                <h3 className="font-mono text-xs uppercase tracking-widest text-zinc-500 dark:text-zinc-400 mb-4 flex items-center gap-2">
+                  <div className="h-px w-8 bg-zinc-300 dark:bg-zinc-700"></div>
+                  Tech Stack
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map(tag => (
+                    <span key={tag} className="px-3 py-1.5 bg-zinc-200 dark:bg-white/5 text-zinc-800 dark:text-zinc-300 text-xs font-mono rounded-full border border-zinc-300 dark:border-white/10 hover:border-purple-400 dark:hover:border-purple-600 transition-colors">
+                      {tag}
+                    </span>
                   ))}
+                </div>
+              </div>
+              
+              <div>
+                <h3 className="font-mono text-xs uppercase tracking-widest text-zinc-500 dark:text-zinc-400 mb-4 flex items-center gap-2">
+                  <div className="h-px w-8 bg-zinc-300 dark:bg-zinc-700"></div>
+                  Links
+                </h3>
+                <div className="flex flex-col gap-3">
+                  <a href="#" className="flex items-center gap-2 text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 transition-colors group">
+                    <Github size={18} className="group-hover:scale-110 transition-transform" /> 
+                    <span className="group-hover:underline">View Source Code</span>
+                  </a>
+                  <a href="#" className="flex items-center gap-2 text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 transition-colors group">
+                    <ArrowUpRight size={18} className="group-hover:scale-110 transition-transform" /> 
+                    <span className="group-hover:underline">Live Demo</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Main Content */}
+            <div className="lg:col-span-8 space-y-10 text-zinc-800 dark:text-zinc-300">
+              {project.process && (
+                <div className="space-y-6">
+                  <h3 className="font-mono text-xs uppercase tracking-widest text-zinc-500 dark:text-zinc-400 mb-6 flex items-center gap-2">
+                    <div className="h-px w-12 bg-zinc-300 dark:bg-zinc-700"></div>
+                    The Process
+                  </h3>
+                  <div className="space-y-8">
+                    {project.process.map((step, idx) => {
+                      // Check if step is a string or object
+                      const isString = typeof step === 'string';
+                      const stepText = isString ? step : step.text;
+                      const stepImages = isString ? null : step.images;
+                      
+                      return (
+                        <div key={idx} className="space-y-4">
+                          <div className="flex gap-4 group">
+                            <div className="flex-shrink-0 w-8 h-8 rounded-full bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-400 flex items-center justify-center font-mono text-sm font-bold group-hover:scale-110 transition-transform">
+                              {idx + 1}
+                            </div>
+                            <p className="text-base leading-relaxed text-zinc-700 dark:text-zinc-300 pt-1">
+                              {stepText}
+                            </p>
+                          </div>
+                          
+                          {/* Render images if they exist */}
+                          {stepImages && stepImages.length > 0 && (
+                            <div className="ml-12 grid grid-cols-2 gap-3">
+                              {stepImages.map((imgPath, imgIdx) => (
+                                <div 
+                                  key={imgIdx}
+                                  className="aspect-video bg-zinc-200 dark:bg-white/5 rounded-lg overflow-hidden border border-zinc-300 dark:border-white/10 hover:border-purple-400 dark:hover:border-purple-600 transition-colors"
+                                >
+                                  <img 
+                                    src={imgPath}
+                                    alt={`Step ${idx + 1} - Image ${imgIdx + 1}`}
+                                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                                  />
+                                </div>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
+
+              {/* Gallery */}
+              {project.gallery && project.gallery.length > 0 && (
+                <div className="space-y-6">
+                  <h3 className="font-mono text-xs uppercase tracking-widest text-zinc-500 dark:text-zinc-400 flex items-center gap-2">
+                    <div className="h-px w-12 bg-zinc-300 dark:bg-zinc-700"></div>
+                    Project Gallery
+                  </h3>
+                  <div className="grid grid-cols-2 gap-4">
+                    {project.gallery.map((imgPath, idx) => (
+                      <div 
+                        key={idx} 
+                        className="aspect-video bg-zinc-200 dark:bg-white/5 rounded-lg overflow-hidden border border-zinc-300 dark:border-white/10 hover:border-purple-400 dark:hover:border-purple-600 transition-colors"
+                      >
+                        <img 
+                          src={imgPath} 
+                          alt={`${project.title} - Image ${idx + 1}`}
+                          className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                        />
+                      </div>
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-zinc-100 dark:bg-black/20 p-6 rounded-lg">
-                <h3 className="font-bold text-lg mb-2 text-zinc-900 dark:text-white flex items-center gap-2">
-                  <Terminal size={18} className="text-purple-500"/> The Challenge
-                </h3>
-                <p className="text-sm leading-relaxed opacity-80">{project.challenge}</p>
-              </div>
-              <div className="bg-zinc-100 dark:bg-black/20 p-6 rounded-lg">
-                <h3 className="font-bold text-lg mb-2 text-zinc-900 dark:text-white flex items-center gap-2">
-                  <Layers size={18} className="text-blue-500"/> The Solution
-                </h3>
-                <p className="text-sm leading-relaxed opacity-80">{project.solution}</p>
-              </div>
-            </div>
-
-            {/* Gallery Placeholders */}
-            <div className="space-y-4">
-               <h3 className="font-mono text-xs uppercase tracking-widest text-zinc-500">Project Gallery</h3>
-               <div className="grid grid-cols-2 gap-4">
-                  <div className="aspect-video bg-zinc-200 dark:bg-white/5 rounded-lg flex items-center justify-center text-zinc-400 text-xs">Image 01</div>
-                  <div className="aspect-video bg-zinc-200 dark:bg-white/5 rounded-lg flex items-center justify-center text-zinc-400 text-xs">Image 02</div>
-               </div>
-            </div>
-
           </div>
         </div>
       </div>
