@@ -96,6 +96,7 @@ export const projects: Project[] = [
   ],
   year: "2022–2025",
   
+  
   shortDescription:
     "How studying design thinking in Ireland before any CS coursework taught me to solve problems through empathy, prototyping, and iteration—skills that now shape every technical project I build.",
   
@@ -158,7 +159,7 @@ export const projects: Project[] = [
     "Carried the foundation into CS work: Now approach code, data pipelines, and interfaces with the same empathy-first mindset. Always ask 'Who am I building for?' and 'Why does it matter?' before diving into technical implementation. Design thinking transformed from an uncertain experiment into the core of how I solve problems."
   ],
 
-  image: "from-violet-700 to-purple-900",
+  image: "public/innovation_projects/Innovation Projects.jpg",
   size: "large",
 
   gallery: [
