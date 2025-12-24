@@ -112,52 +112,46 @@ export const projects: Project[] = [
     {
       text: "Took a chance on Ireland: Committed to studying abroad for my first Innovation Academy semester before any formal CS classes, approaching it as an experiment in learning how innovators think and solve problems.",
       images: [
-        "/projects/innovation-journey/ireland-arrival.jpg",
-        "/projects/innovation-journey/maynooth-campus.jpg"
+        "https://github.com/myanramsey/my-portfolio/blob/main/public/innovation_projects/maynooth_campus.jpeg?raw=true",
+        "https://github.com/myanramsey/my-portfolio/blob/main/public/innovation_projects/ireland_castle.jpeg?raw=true"
       ]
     },
     
     {
       text: "PAAMS - Smart Luggage Solution: Led the design process as Chief Design Officer for a smart suitcase with integrated sensors that scan contents for prohibited items before travelers reach airport security. Ran rapid 'Crazy Eights' ideation sessions with my team, built physical prototypes, and managed the lifecycle from hardware constraints to digital UX. Learned end-to-end product design, 3D CAD (Fusion 360), hybrid hardware/software UX, and design leadership.",
       images: [
-        "/projects/innovation-journey/paams-prototype.jpg",
-        "/projects/innovation-journey/paams-crazy-eights.jpg",
-        "/projects/innovation-journey/paams-team-work.jpg"
+        "https://github.com/myanramsey/my-portfolio/blob/main/public/innovation_projects/paams_project.jpg?raw=true",
       ]
     },
     
     {
       text: "TravHelp - Anxiety-Free Travel App: Created a mobile app that consolidates tickets, weather, navigation, and mental health check-ins into one interface for the 25% of travelers who experience anxiety. Designed features like 'Nearest Restroom' locator and 'Calm Zone' finder to de-escalate high-stress moments. Developed skills in information architecture, user-centric design, and low-to-high fidelity prototyping.",
       images: [
-        "/projects/innovation-journey/travhelp-screens.jpg",
-        "/projects/innovation-journey/travhelp-wireframes.jpg"
+        "https://github.com/myanramsey/my-portfolio/blob/main/public/innovation_projects/TravHelper.jpg?raw=true",
       ]
     },
     
     {
       text: "KOSS Pro Modification - Acoustic Shield Design: Developed a custom detachable acoustic shield to eliminate sound leakage from Koss Porta Pro headphones. Started with hand-drawn orthographic sketches, modeled in Fusion 360, and created technical engineering drawings with precise measurements. Learned 3D modeling, technical drafting, CAD engineering, and design for manufacturing.",
       images: [
-        "/projects/innovation-journey/koss-technical-drawing.jpg",
-        "/projects/innovation-journey/koss-prototype.jpg",
-        "/projects/innovation-journey/koss-sketches.jpg"
+        "https://github.com/myanramsey/my-portfolio/blob/main/public/innovation_projects/Koss%20Pro%20Modifcation%20.jpg?raw=true",
       ]
     },
     
     {
       text: "URE-KA - Nutrient Recovery System: Applied design thinking to system-scale sustainability challenges, requiring stakeholder analysis, systems mapping, and impact-focused communication beyond single-product solutions. Learned to think about complex environmental problems holistically.",
       images: [
-        "/projects/innovation-journey/ure-ka-poster.jpg",
-        "/projects/innovation-journey/ure-ka-presentation.jpg"
+        "https://github.com/myanramsey/my-portfolio/blob/main/public/innovation_projects/ureka_project.jpg?raw=true",
+        "https://github.com/myanramsey/my-portfolio/blob/main/public/innovation_projects/ureka_project.png?raw=true"
       ]
     },
     
     {
       text: "Explored Ireland beyond projects: Discovered through traveling to the Cliffs of Moher, Dublin streets, and Galway Bay that life doesn't follow a set timeline. Connected with inspiring mentors like Sierra Calhoun-Pollard, Ph.D., whose cross-disciplinary approach to innovation continues to shape how I work. My study abroad classmates became my rock throughout UF—proving that the best part of innovation is the community you build.",
       images: [
-        "/projects/innovation-journey/ireland-cliffs-moher.jpg",
-        "/projects/innovation-journey/dublin-exploration.jpg",
-        "/projects/innovation-journey/classmates-group.jpg",
-        "/projects/innovation-journey/galway-sunset.jpg"
+        "https://github.com/myanramsey/my-portfolio/blob/main/public/innovation_projects/nature_ireland.jpeg?raw=true",
+        "https://github.com/myanramsey/my-portfolio/blob/main/public/innovation_projects/group_ireland_picture.jpg?raw=true",
+        "https://github.com/myanramsey/my-portfolio/blob/main/public/innovation_projects/ireland_landscape.jpg?raw=true",
       ]
     },
     
@@ -168,10 +162,14 @@ export const projects: Project[] = [
   size: "large",
 
   gallery: [
-    "/projects/innovation-journey/hero-ireland-collage.jpg",
-    "/projects/innovation-journey/workshop-prototyping.jpg",
-    "/projects/innovation-journey/team-collaboration.jpg",
-    "/projects/innovation-journey/final-presentations.jpg"
+    "https://github.com/myanramsey/my-portfolio/blob/main/public/innovation_projects/Koss%20Pro%20Modifcation%20.jpg?raw=true",
+    "https://github.com/myanramsey/my-portfolio/blob/main/public/innovation_projects/TravHelper.jpg?raw=true",
+    "https://github.com/myanramsey/my-portfolio/blob/main/public/innovation_projects/group_ireland_picture.jpg?raw=true",
+    "https://github.com/myanramsey/my-portfolio/blob/main/public/innovation_projects/ireland_castle.jpeg?raw=true",
+    "https://github.com/myanramsey/my-portfolio/blob/main/public/innovation_projects/ireland_landscape.jpg?raw=true",
+    "https://github.com/myanramsey/my-portfolio/blob/main/public/innovation_projects/paams_project.jpg?raw=true",
+    "https://github.com/myanramsey/my-portfolio/blob/main/public/innovation_projects/ureka_project.jpg?raw=true",
+    "https://github.com/myanramsey/my-portfolio/blob/main/public/innovation_projects/ureka_project.png?raw=true"
   ]
 }
 
