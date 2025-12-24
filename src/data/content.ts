@@ -164,9 +164,6 @@ export const projects: Project[] = [
   gallery: [
     "https://github.com/myanramsey/my-portfolio/blob/main/public/innovation_projects/Koss%20Pro%20Modifcation%20.jpg?raw=true",
     "https://github.com/myanramsey/my-portfolio/blob/main/public/innovation_projects/TravHelper.jpg?raw=true",
-    "https://github.com/myanramsey/my-portfolio/blob/main/public/innovation_projects/group_ireland_picture.jpg?raw=true",
-    "https://github.com/myanramsey/my-portfolio/blob/main/public/innovation_projects/ireland_castle.jpeg?raw=true",
-    "https://github.com/myanramsey/my-portfolio/blob/main/public/innovation_projects/ireland_landscape.jpg?raw=true",
     "https://github.com/myanramsey/my-portfolio/blob/main/public/innovation_projects/paams_project.jpg?raw=true",
     "https://github.com/myanramsey/my-portfolio/blob/main/public/innovation_projects/ureka_project.jpg?raw=true",
     "https://github.com/myanramsey/my-portfolio/blob/main/public/innovation_projects/ureka_project.png?raw=true"
