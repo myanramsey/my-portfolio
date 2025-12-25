@@ -15,6 +15,9 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
     return () => { document.body.style.overflow = 'unset'; };
   }, []);
 
+  // Check if image is a URL or gradient class
+  const isImageUrl = project.image.startsWith('http') || project.image.startsWith('/');
+
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 md:p-8">
       <div className="absolute inset-0 bg-zinc-950/80 backdrop-blur-sm" onClick={onClose} />
@@ -42,8 +45,23 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
       
       <div className="relative w-full max-w-6xl h-full md:h-[90vh] bg-zinc-50 dark:bg-zinc-900 rounded-lg shadow-2xl overflow-y-auto flex flex-col transition-colors duration-500">
         
-        {/* Modal Header Image */}
-        <div className={`w-full h-64 md:h-96 shrink-0 bg-gradient-to-br ${project.image} relative`}>
+        {/* Modal Header Image - Support both URL and Gradient */}
+        <div className={`w-full h-64 md:h-96 shrink-0 relative ${
+          isImageUrl ? '' : `bg-gradient-to-br ${project.image}`
+        }`}>
+          {/* Render actual image if URL is provided */}
+          {isImageUrl && (
+            <>
+              <img 
+                src={project.image} 
+                alt={project.title}
+                className="w-full h-full object-cover"
+              />
+              {/* Dark overlay for better text readability */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20"></div>
+            </>
+          )}
+          
           <button 
             onClick={onClose}
             className="absolute top-6 right-6 p-2 bg-black/20 hover:bg-black/40 text-white rounded-full backdrop-blur-md transition-colors z-10"
@@ -109,22 +127,39 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
               </div>
             </div>
             
-            <div>
-              <h3 className="font-mono text-xs uppercase tracking-widest text-zinc-500 dark:text-zinc-400 mb-4 flex items-center gap-2">
-                <div className="h-px w-8 bg-zinc-300 dark:bg-zinc-700"></div>
-                Links
-              </h3>
-              <div className="flex flex-col gap-3">
-                <a href="#" className="flex items-center gap-2 text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 transition-colors group">
-                  <Github size={18} className="group-hover:scale-110 transition-transform" /> 
-                  <span className="group-hover:underline">View Source Code</span>
-                </a>
-                <a href="#" className="flex items-center gap-2 text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 transition-colors group">
-                  <ArrowUpRight size={18} className="group-hover:scale-110 transition-transform" /> 
-                  <span className="group-hover:underline">Live Demo</span>
-                </a>
+            {/* Dynamic Links Section - Only show if URLs exist */}
+            {(project.githubUrl || project.demoUrl) && (
+              <div>
+                <h3 className="font-mono text-xs uppercase tracking-widest text-zinc-500 dark:text-zinc-400 mb-4 flex items-center gap-2">
+                  <div className="h-px w-8 bg-zinc-300 dark:bg-zinc-700"></div>
+                  Links
+                </h3>
+                <div className="flex flex-col gap-3">
+                  {project.githubUrl && (
+                    <a 
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 transition-colors group"
+                    >
+                      <Github size={18} className="group-hover:scale-110 transition-transform" /> 
+                      <span className="group-hover:underline">View Source Code</span>
+                    </a>
+                  )}
+                  {project.demoUrl && (
+                    <a 
+                      href={project.demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 text-purple-600 dark:text-purple-400 hover:text-purple-700 dark:hover:text-purple-300 transition-colors group"
+                    >
+                      <ArrowUpRight size={18} className="group-hover:scale-110 transition-transform" /> 
+                      <span className="group-hover:underline">Live Demo</span>
+                    </a>
+                  )}
+                </div>
               </div>
-            </div>
+            )}
           </div>
 
           {/* Main Content - Full Width Process */}

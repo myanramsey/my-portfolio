@@ -62,23 +62,75 @@ export const projects: Project[] = [
 
   // ==================== DESIGN PROJECTS ====================
   {
-    id: 4,
-    title: "SRTD File Organizer",
-    category: "Design",
-    tags: ["Figma", "UI/UX", "AI Integration", "Retro Design", "Accessibility"],
-    year: "2024",
-    shortDescription: "AI-driven file sorting tool with retro-style accessible interface.",
-    fullDescription: "A creative exploration combining nostalgic retro aesthetics with modern AI-powered file organization, designed in Figma with a focus on accessibility and user experience.",
-    process: [
-      "Design Research: Explored retro computing aesthetics from the 1980s-90s while researching modern accessibility standards to create a bridge between nostalgia and usability.",
-      "Figma Prototyping: Created comprehensive Figma prototypes with interactive flows, ensuring the retro aesthetic didn't compromise on accessibility features like screen reader compatibility and color contrast.",
-      "AI Integration Planning: Designed user flows for AI-driven file sorting that feel intuitive and transparent, avoiding the 'black box' problem common in AI interfaces."
-    ],
-    challenge: "Creating a retro-style interface that feels nostalgic while maintaining modern accessibility standards and seamlessly integrating AI-driven functionality without overwhelming users.",
-    solution: "Designed comprehensive Figma prototypes balancing retro aesthetics with WCAG accessibility compliance, creating an experience that's both visually engaging and functionally inclusive for AI-powered file organization.",
-    image: "from-purple-700 to-pink-900",
-    size: 'medium'
-  },
+  id: 4,
+  title: "SRTD File Organizer",
+  category: "Engineering",
+  tags: ["Python", "PySide6", "OpenAI API", "Weaviate", "RapidFuzz", "AI/ML", "Vector Database"],
+  githubUrl: "https://github.com/CakeCrusher/srtd",
+  demoUrl: "https://youtu.be/YQqr9JB9vEw", 
+  year: "2024",
+  shortDescription: "AI-powered file organization system helping students manage academic materials with intelligent contextual understanding and semantic search.",
+  
+  fullDescription: "Built to solve the problem that 50% of students lack a unified system to manage academic materials. SRTD leverages AI to intelligently organize and locate relevant files through contextual understanding, fuzzy matching, and automatic summarization—empowering students to focus on learning rather than file management.",
+
+  challenge: "Students face overwhelming amounts of educational content spread across devices, with 87% believing better organization would improve their grades. The challenge was building an AI system that could understand file context, handle bulk processing, and present organization suggestions transparently without feeling like a 'black box.'",
+
+  solution: "Engineered a cross-platform desktop application using PySide6 that combines OpenAI's API for semantic analysis, Weaviate vector database for efficient embedding storage, and RapidFuzz for fuzzy string matching. The system analyzes file content, generates intelligent organization suggestions with confidence scores, and requires user confirmation before moving files—keeping humans in the loop.",
+
+  process: [
+    {
+      text: "Problem Research & Scope Definition: Identified that 50% of students lack unified file management systems and 87% believe better organization would improve grades. Defined core features: AI-driven contextual understanding, pattern matching, efficient summarization, and bulk processing.",
+      images: []
+    },
+    
+    {
+      text: "Tech Stack Selection: Chose PySide6 for cross-platform GUI, OpenAI API for semantic analysis and embeddings, Weaviate vector database for scalable similarity search, RapidFuzz for fast fuzzy matching, and PyPDF2 for PDF text extraction. Each tool selected for specific strengths in the AI-powered workflow.",
+      images: [
+        "https://github.com/user-attachments/assets/c038cadf-81a1-4ecf-b45b-7ad69fe4eff4" // UML diagram
+      ]
+    },
+    
+    {
+      text: "File Analysis Pipeline: Built system to access file system, process files into structured objects, and analyze using OpenAI API to generate summaries, extract key information, and create embeddings. Implemented fuzzy matching to identify filename similarities and AI embeddings to group files by content context.",
+      images: []
+    },
+    
+    {
+      text: "GUI Development with PySide6: Designed and implemented cross-platform interface displaying original file locations, AI-suggested destinations, confidence scores for each decision, and file summaries. Overcame team's limited GUI experience to deliver fully functional interface with user confirmation workflow.",
+      images: [
+        "https://github.com/user-attachments/assets/08c86c60-8b7e-405b-8aba-7fee6e1f2665", // Selecting files
+        "https://github.com/user-attachments/assets/4ce981a9-c70b-44f9-96a1-e7d38515ecce"  // Transferring files
+      ]
+    },
+    
+    {
+      text: "Vector Database Integration: Implemented Weaviate to efficiently store embeddings generated by OpenAI API and enable semantic similarity matching. This allowed SRTD to cluster files based on contextual relationships at scale with fast retrieval performance.",
+      images: []
+    },
+    
+    {
+      text: "Team Collaboration & Debugging: Navigated merge conflicts, coordinated contributions across team members with different expertise areas, and debugged Python runtime errors caused by lack of static typing. Successfully integrated multiple technologies (AI, fuzzy matching, PDF processing, vector database) into cohesive system.",
+      images: [
+        "https://github.com/user-attachments/assets/74792827-e9ce-454d-b933-dcb51db4924d", // UI design process
+        "https://github.com/user-attachments/assets/60a1acb3-1cec-4158-a05c-cbcb417cd42b"  // Design slides
+      ]
+    },
+    
+    "Key Lessons Learned: Breaking down features into manageable components is critical for AI projects. GUI development requires more time than expected—plan accordingly. Python's simplicity can mask debugging challenges when runtime errors emerge. Keeping users in the loop (confirmation workflow) builds trust in AI systems."
+  ],
+
+  image: "https://github.com/user-attachments/assets/d88dc431-03a0-4a1f-b10e-7b7953f7e08f",
+  size: 'medium',
+  
+  gallery: [
+    "https://github.com/user-attachments/assets/d88dc431-03a0-4a1f-b10e-7b7953f7e08f", // Hero image
+    "https://github.com/user-attachments/assets/08c86c60-8b7e-405b-8aba-7fee6e1f2665", // Selecting files
+    "https://github.com/user-attachments/assets/4ce981a9-c70b-44f9-96a1-e7d38515ecce", // Transferring files
+    "https://github.com/user-attachments/assets/c038cadf-81a1-4ecf-b45b-7ad69fe4eff4", // UML diagram
+    "https://github.com/user-attachments/assets/74792827-e9ce-454d-b933-dcb51db4924d", // UI design
+    "https://github.com/user-attachments/assets/60a1acb3-1cec-4158-a05c-cbcb417cd42b"  // Design process
+  ]
+ },
 
   // ==================== INNOVATION PROJECTS (COMBINED) ====================
   {
@@ -159,8 +211,8 @@ export const projects: Project[] = [
     "Carried the foundation into CS work: Now approach code, data pipelines, and interfaces with the same empathy-first mindset. Always ask 'Who am I building for?' and 'Why does it matter?' before diving into technical implementation. Design thinking transformed from an uncertain experiment into the core of how I solve problems."
   ],
 
-  image: "public/innovation_projects/Innovation Projects.jpg",
-  size: "large",
+  image: "https://github.com/myanramsey/my-portfolio/blob/a7747a7edbfabd695bb6af4ea524c44b8297dde2/public/innovation_projects/Innovation%20Projects.png?raw=true",
+  size: "medium",
 
   gallery: [
     "https://github.com/myanramsey/my-portfolio/blob/main/public/innovation_projects/Koss%20Pro%20Modifcation%20.jpg?raw=true",

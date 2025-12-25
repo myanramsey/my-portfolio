@@ -16,7 +16,8 @@ export interface Project {
     text: string;
     images?: string[];
   })[];
-  
+
+
   image: string;
   size: string;
   gallery?: string[];
@@ -34,6 +35,10 @@ export interface Project {
     skills: string;
     images: string[];
   }[];
+
+  githubUrl?: string;
+  demoUrl?: string;
+  
   
   community?: {
     text: string;
