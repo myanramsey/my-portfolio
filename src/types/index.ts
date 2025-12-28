@@ -3,7 +3,7 @@ export type Category = 'All' | 'Data' | 'Engineering' | 'Art' | 'Design';
 export interface Project {
   id: number;
   title: string;
-  category: string;
+  category: Category; // ← Changed from string to Category for type safety
   tags: string[];
   year: string;
   shortDescription: string;
@@ -17,9 +17,8 @@ export interface Project {
     images?: string[];
   })[];
 
-
   image: string;
-  size: string;
+  size: 'small' | 'medium' | 'large'; // ← Also type-safe this
   gallery?: string[];
   
   // Optional: Detailed nested projects (if you want to keep this structure)
@@ -38,7 +37,7 @@ export interface Project {
 
   githubUrl?: string;
   demoUrl?: string;
-  
+  sketchfabId?: string; // ← ADD THIS for 3D models
   
   community?: {
     text: string;

@@ -221,8 +221,35 @@ export const projects: Project[] = [
     "https://github.com/myanramsey/my-portfolio/blob/main/public/innovation_projects/ureka_project.jpg?raw=true",
     "https://github.com/myanramsey/my-portfolio/blob/main/public/innovation_projects/ureka_project.png?raw=true"
   ]
-}
+  },
 
+  // ==================== ART PROJECTS ====================
+  {
+  id: 6,
+  title: "3D Modeling Projects",
+  category: "Art",
+  tags: ["Blender", "3D Modeling", "Lighting Design", "Environment Art", "PBR Textures"],
+  year: "2024",
+  shortDescription: "A warm, isometric room scene showcasing 3D modeling, lighting, and composition skills in Blender.",
+  fullDescription: "Created in Blender, this cozy room environment demonstrates my skills in 3D modeling, texture work, and lighting design. The scene features custom-modeled furniture, plants, and decor elements arranged to create an inviting, lived-in atmosphere with careful attention to material detail and warm color grading.",
+  challenge: "Creating a cohesive, visually engaging environment while balancing complexity with clean composition—ensuring each element contributes to the overall mood without overwhelming the scene.",
+  solution: "Used a limited warm color palette with green accents, strategic three-point lighting to guide the viewer's eye, and careful placement of assets to create natural visual flow. The isometric camera angle provides clear readability while maintaining depth and interest.",
+  process: [
+    "Concept & Layout: Sketched isometric room layout focusing on composition, visual flow, and focal points like the bookshelf and window area.",
+    "Asset Modeling: Modeled all furniture pieces, plants, frames, and decorative elements in Blender using box modeling techniques and modifiers for clean topology.",
+    "Materials & Textures: Applied PBR materials with procedural textures for wood grain, fabric, and foliage, adjusting roughness and color values for visual interest.",
+    "Lighting Setup: Implemented three-point lighting with warm-toned area lights, added ambient occlusion for depth, and used subtle rim lighting to separate objects from backgrounds.",
+    "Rendering & Post: Rendered with Cycles at high sample counts for clean results, then applied color grading and subtle bloom for a polished final look."
+  ],
+  image: "from-amber-600 to-green-700",
+  size: "large",
+  sketchfabId: "36d638fca1874c5eb6bab03f81a0036d", // ← YOUR ID HERE
+  gallery: [
+    "/projects/cozy-room-final.jpg",
+    "/projects/cozy-room-wireframe.jpg",
+    "/projects/cozy-room-lighting.jpg"
+  ]
+  }
 ];
 
 // ==================== TIMELINE ====================

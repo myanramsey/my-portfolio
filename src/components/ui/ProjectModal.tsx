@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import { X, Calendar, Tag, Github, ArrowUpRight, Terminal, Layers } from 'lucide-react';
+import { X, Calendar, Tag, Github, ArrowUpRight, Terminal, Layers, Box } from 'lucide-react';
+import { SketchfabViewer } from '../ui/SketchfabViewer'; // 
 import type { Project } from '../../types';
 
 interface ProjectModalProps {
@@ -49,7 +50,6 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
         <div className={`w-full h-64 md:h-96 shrink-0 relative ${
           isImageUrl ? '' : `bg-gradient-to-br ${project.image}`
         }`}>
-          {/* Render actual image if URL is provided */}
           {isImageUrl && (
             <>
               <img 
@@ -57,7 +57,6 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                 alt={project.title}
                 className="w-full h-full object-cover"
               />
-              {/* Dark overlay for better text readability */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/20"></div>
             </>
           )}
@@ -87,6 +86,30 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
               {project.fullDescription}
             </p>
           </div>
+
+          {/* ==================== 3D VIEWER SECTION ==================== */}
+          {project.sketchfabId && (
+            <div className="space-y-4">
+              <h3 className="font-mono text-xs uppercase tracking-widest text-zinc-500 dark:text-zinc-400 flex items-center gap-2">
+                <div className="h-px w-12 bg-zinc-300 dark:bg-zinc-700"></div>
+                <Box size={14} />
+                Interactive 3D Model
+              </h3>
+              
+              <div className="bg-zinc-100 dark:bg-zinc-950/50 p-4 md:p-6 rounded-xl border border-zinc-200 dark:border-white/10">
+                <SketchfabViewer 
+                  modelId={project.sketchfabId}
+                  title={project.title}
+                  autorotate={true}
+                  transparent={false}
+                />
+                <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-4 text-center font-mono">
+                  ↻ Click and drag to rotate • Scroll to zoom • Click fullscreen icon for VR
+                </p>
+              </div>
+            </div>
+          )}
+          {/* ======================================================== */}
 
           {/* Challenge & Solution - Prominent Cards */}
           <div className="grid md:grid-cols-2 gap-6">
@@ -172,7 +195,6 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                 </h3>
                 <div className="space-y-8">
                   {project.process.map((step, idx) => {
-                    // Check if step is a string or object
                     const isString = typeof step === 'string';
                     const stepText = isString ? step : step.text;
                     const stepImages = isString ? null : step.images;
@@ -188,7 +210,6 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
                           </p>
                         </div>
                         
-                        {/* Render clickable images if they exist */}
                         {stepImages && stepImages.length > 0 && (
                           <div className="ml-12 grid grid-cols-2 md:grid-cols-3 gap-3">
                             {stepImages.map((imgPath, imgIdx) => (
