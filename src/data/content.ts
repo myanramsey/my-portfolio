@@ -18,7 +18,7 @@ export const projects: Project[] = [
     challenge: "Handling 100,000+ real-time data points from disparate sources while maintaining performance and providing actionable insights for crime prevention and real estate analysis.",
     solution: "Engineered an efficient data pipeline using Python, Pandas, and GeoPandas to process and visualize crime and property data in real-time, reducing analysis time by 30% and enabling data-driven loss prevention strategies.",
     image: "from-red-700 to-orange-900", 
-    size: 'large'
+    size: 'medium'
   },
 
   // ==================== ENGINEERING PROJECTS ====================
@@ -38,7 +38,7 @@ export const projects: Project[] = [
     challenge: "Manual data discovery was extremely time-consuming, hindering team productivity and slowing down onboarding to Bloomberg's knowledge graph platform. The system needed to handle complex financial datasets while maintaining accuracy.",
     solution: "Deployed an advanced fuzzy search solution leveraging NLP techniques that reduced manual discovery time by 78%, while implementing scalable ETL pipelines that processed 500+ complex financial datasets with seamless integration.",
     image: "from-blue-800 to-indigo-950",
-    size: 'large'
+    size: 'medium'
   },
 
   {
@@ -226,31 +226,64 @@ export const projects: Project[] = [
   // ==================== ART PROJECTS ====================
   {
   id: 6,
-  title: "3D Modeling Projects",
+  title: "3D Modeling & Animation Works",
   category: "Art",
-  tags: ["Blender", "3D Modeling", "Lighting Design", "Environment Art", "PBR Textures"],
-  year: "2024",
-  shortDescription: "A warm, isometric room scene showcasing 3D modeling, lighting, and composition skills in Blender.",
-  fullDescription: "Created in Blender, this cozy room environment demonstrates my skills in 3D modeling, texture work, and lighting design. The scene features custom-modeled furniture, plants, and decor elements arranged to create an inviting, lived-in atmosphere with careful attention to material detail and warm color grading.",
-  challenge: "Creating a cohesive, visually engaging environment while balancing complexity with clean composition—ensuring each element contributes to the overall mood without overwhelming the scene.",
-  solution: "Used a limited warm color palette with green accents, strategic three-point lighting to guide the viewer's eye, and careful placement of assets to create natural visual flow. The isometric camera angle provides clear readability while maintaining depth and interest.",
+  tags: ["Blender", "3D Modeling", "Animation", "Lighting Design", "Procedural Textures", "Environment Art", "Motion Graphics"],
+  year: "2025",
+  shortDescription: "Collection of 3D modeling and animation projects showcasing environment design, organic modeling, motion design, and technical execution in Blender.",
+  fullDescription: "Created as coursework and personal projects, this collection demonstrates my range in 3D work—from cozy interior environments with intricate lighting setups to organic modeling of plants and DNA structures, plus character animation and motion graphics. Each piece explores different aspects of 3D artistry: clean topology, realistic materials, procedural textures, keyframe animation, and compelling composition.",
+  challenge: "Balancing artistic vision with technical execution across multiple project types—creating cohesive environments requires mastering modeling, texturing, lighting, and composition simultaneously, while animation demands understanding of timing, weight, and storytelling through motion. Organic forms like plants require procedural techniques and natural growth patterns.",
+  solution: "Developed a systematic workflow starting with reference gathering and composition planning, then moved to iterative modeling with attention to topology and form. Applied PBR materials and procedural textures for realism, used three-point lighting for depth, implemented keyframe animation with proper easing curves, and refined through multiple render passes to achieve polished results.",
   process: [
-    "Concept & Layout: Sketched isometric room layout focusing on composition, visual flow, and focal points like the bookshelf and window area.",
-    "Asset Modeling: Modeled all furniture pieces, plants, frames, and decorative elements in Blender using box modeling techniques and modifiers for clean topology.",
-    "Materials & Textures: Applied PBR materials with procedural textures for wood grain, fabric, and foliage, adjusting roughness and color values for visual interest.",
-    "Lighting Setup: Implemented three-point lighting with warm-toned area lights, added ambient occlusion for depth, and used subtle rim lighting to separate objects from backgrounds.",
-    "Rendering & Post: Rendered with Cycles at high sample counts for clean results, then applied color grading and subtle bloom for a polished final look."
+    {
+      text: "Wireframe & Topology: Built clean edge flow for all models—room furniture using box modeling with subdivision surfaces, plants using particle systems and modifiers. Maintained quad topology for proper subdivision and animation-ready meshes with deformation in mind.",
+      images: [
+        "/3d-projects/room_wireframe.jpg",
+        "/3d-projects/plant_wireframe.jpg"
+      ]
+    },
+    {
+      text: "Solid Modeling & Form: Blocked out major shapes and proportions in solid view to establish composition. Focused on readable silhouettes and balanced visual weight across all elements before adding detail. Created animation-ready rigs for character work.",
+      images: [
+        "/3d-projects/room_solid.jpg"
+      ]
+    },
+    {
+      text: "Texturing & Materials: Applied PBR materials with procedural nodes—wood grain for furniture using wave textures and color ramps, fabric using noise modifiers for subtle variation, plants with translucency for realistic leaves. Adjusted roughness and specular values for material differentiation and proper light interaction.",
+      images: [
+        "/3d-projects/room_texture.jpg",
+        "/3d-projects/planr_render.jpg"
+      ]
+    },
+    {
+      text: "Animation & Motion Design: Implemented keyframe animation with proper timing and easing curves for character movement and camera paths. Used graph editor to refine motion arcs and add secondary animation. Applied principles of squash and stretch, anticipation, and follow-through for believable motion.",
+      images: []
+    },
+    {
+      text: "Lighting & Rendering: Implemented three-point lighting with warm area lights as key, cool fill lights for balance, and rim lights for separation. Added ambient occlusion in compositing for contact shadows. Rendered with Cycles at high samples (512+) for noise-free results. Adjusted lighting per frame for animated sequences.",
+      images: [
+        "/3d-projects/room_render.jpg",
+        "/3d-projects/double_helix.jpg"
+      ]
+    },
+    "Post-Processing & Compositing: Color graded in Blender's compositor—adjusted curves for mood, added subtle bloom on lights, increased saturation on accent colors (plants, blue rug). Applied vignetting and sharpening for final polish. For animations, rendered out image sequences and compiled in video editor with sound design."
   ],
-  image: "from-amber-600 to-green-700",
-  size: "large",
-  sketchfabId: "36d638fca1874c5eb6bab03f81a0036d", // ← YOUR ID HERE
+  image: "https://github.com/myanramsey/my-portfolio/blob/main/public/art/3d_modeling_card.png?raw=true",
+  size: "medium",
+  sketchfabId: "36d638fca1874c5eb6bab03f81a0036d",
+  demoUrl: "https://youtu.be/GPsMEmTOAmU", // ← Your CAP3034 animation
   gallery: [
-    "/projects/cozy-room-final.jpg",
-    "/projects/cozy-room-wireframe.jpg",
-    "/projects/cozy-room-lighting.jpg"
-  ]
+    "/3d-projects/room_render.jpg",
+    "/3d-projects/room_wireframe.jpg",
+    "/3d-projects/room_texture.jpg",
+    "/3d-projects/planr_render.jpg",
+    "/3d-projects/plant_wireframe.jpg",
+    "/3d-projects/double_helix.jpg"
+    ]
   }
-];
+]
+
+
 
 // ==================== TIMELINE ====================
 export const timeline: TimelineItem[] = [
