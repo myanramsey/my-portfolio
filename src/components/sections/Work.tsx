@@ -16,7 +16,7 @@ export const Work = ({ onSelectProject }: WorkProps) => {
   );
 
   return (
-    <section id="work" className="pt-12 pb-32 px-6">
+    <section id="work" className="pt-0 pb-32 px-6">
       <div className="max-w-7xl mx-auto">
         <SectionHeader number="01" title="Selected Works" />
         

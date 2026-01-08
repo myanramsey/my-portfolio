@@ -43,3 +43,49 @@ body {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+@layer base {
+html {
+  scroll-behavior: smooth;
+  /* Prevent horizontal scroll on mobile */
+  overflow-x: hidden;
+}
+
+body {
+  @apply bg-white dark:bg-zinc-950 text-zinc-900 dark:text-zinc-100;
+  /* Prevent horizontal scroll */
+  overflow-x: hidden;
+  /* Better font rendering on mobile */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Better touch targets for mobile */
+button, a {
+  @apply touch-manipulation;
+  min-height: 44px; /* iOS recommended touch target */
+}
+
+/* Prevent zoom on input focus (iOS) */
+input, select, textarea {
+  font-size: 16px;
+}
+}
+
+@layer utilities {
+/* Custom scrollbar for desktop */
+@media (min-width: 768px) {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-zinc-100 dark:bg-zinc-900;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-zinc-300 dark:bg-zinc-700 rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-zinc-400 dark:bg-zinc-600;
+  }
+}
+}

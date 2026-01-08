@@ -22,26 +22,26 @@ export const projects: Project[] = [
     {
       text: "Geospatial Processing & Mapping: Implemented GeoPandas to process parcel geometries and coordinate transformations. Created GeoJSON files merging crime locations with property boundaries for spatial analysis. Built interactive Leaflet.js map with marker clustering to visualize 50,000+ incidents, enabling zoom-based exploration of crime patterns across neighborhoods.",
       images: [
-        "https://lh3.googleusercontent.com/sitesv/AAzXCkePNlnqZXarR6gO723KEoxfBhf1QRn0jWONupdZH0S5aIuu1Tz_lCTZbK5BPZ9uE0k5PUTcjukNyupEtSlUxoENObf9R0FAvT80SBbACjfWaKThxlIOIV_7CQlDyqlH2fLtfxVJMdn6xBylE43Qx6dTWxnreuhcTNtzd2j6qmRIbszv7NorzclunIYmnpHXSm64GqlmwWtiGfg8zjgRzv8TEIx4zCcKfaMy=w1280"
+        "https://github.com/myanramsey/my-portfolio/blob/main/public/data_crime_project/3d%20visualization.png?raw=true"
       ]
     },
     {
       text: "Demographic Integration: Leveraged US Census Bureau API to extract ZIP code-level demographic and socioeconomic indicators including median household income, poverty rates, education levels, gender distribution, commute times, and internet access. Merged census data with real estate transactions and crime records to enable multi-dimensional correlation analysis of 12+ variables.",
       images: [
-        "https://lh3.googleusercontent.com/sitesv/AAzXCkfQ46TneQ1ZDzYWXI2QeBO5gnQfU9a6C0dDyAgisO4z_FXzxtHc_6CTVNWnG0kkaQeTZUG0hT1eyBbeUA4ukE8np-VG7oalD-EKfwk3rV_Ug0HhAht8bP0xQ6pUP9mO5Z-gvwOZfdBhTqK9eZ9njSMIconaw8phaCN3WpcBraHcwS5CCRvIPgzJueloyl3qoKVqT2MzsAUKDcm4Yev7jhkGaHP8pMFa1YTQ12Q=w1280"
+        "https://github.com/myanramsey/my-portfolio/blob/main/public/data_crime_project/demographics%20vs%20crime.png?raw=true"
       ]
     },
     {
       text: "Statistical Correlation Analysis: Conducted comprehensive correlation analysis examining relationships between crime rates, real estate values, and socioeconomic factors. Normalized all variables for fair comparison and generated correlation matrices revealing significant patterns: income/poverty strongly negatively correlated with crime (-0.95 for poverty), male population positively correlated with crime incidents, and longer commute times associated with lower crime rates.",
       images: [
-        "https://lh3.googleusercontent.com/sitesv/AAzXCkfSPS2h0IFyuLILWyxEMZAMQ-_efz-dNZqPJRXtssEbQEEerX1Hzt0TSAY-zLrb-p5jr8aEGkijdKM8rBkIVnONrmoGdhJjDCGILq3g7-zbby1_pRs0iP-SJmDg8AzapOv0odSRcivL3hRaeDnBFi7z8Y7mx6MFvjRgBtd8CMrIPfR9AKNmK2oCKyg4yyTryTN_LV_yA5WKES-aahxcmfm5Y37EihoMw07tKug=w1280", // Your first correlation heatmap
-        "https://lh3.googleusercontent.com/sitesv/AAzXCkc3maOdqVIMxRALtSefygPbWR1ivUwAP8-kS1thSlBvMZ7ShEidTL3EI2OesmEcCmHUQ_0-v75qOs-L9SgnR1jvP1vNelPPNhonzgHB67bnm2ypnDwh-so3364xy4x9D2TW6adi52FMNSMk6hLUXJsjTL9PHSK5MrIGciTangJQ52rxn2bl9wZXVaJSTOpAMOXXGWOhAUqMb2N5B1eHs_zppMldvT4MrsWDBxo=w1280"  // Your second simplified matrix
+        "https://github.com/myanramsey/my-portfolio/blob/main/public/data_crime_project/correlation_matrix_normalized.png?raw=true", // Your first correlation heatmap
+        "https://github.com/myanramsey/my-portfolio/blob/main/public/data_crime_project/correlation_demographic_matrix.png?raw=true"  // Your second simplified matrix
       ]
     },
     {
       text: "Points of Interest (POI) Analysis: Integrated OpenStreetMap data to calculate distances between properties and 20+ POI categories (universities, police stations, restaurants, banks, community centers, etc.). Analyzed spatial relationships revealing exponential decay patterns—crime incidents increase significantly near universities and outdoor seating areas, with counterintuitive finding that police station proximity correlates with higher reported crime.",
       images: [
-        "https://lh3.googleusercontent.com/sitesv/AAzXCkd0UENWZ-nunHnWz4eKfVCK_xNJ29GLPDHIdP6sJjh2SmZK3PWaha8erAHE2t0jmWHkciDtVLBkVqBBOyhgUMRrnCmHQczLvD4sVUvtRNTXxsJOCSTTiiEronH_h10T1Ty3DDK-jyFYu1gf4t0JI2amaYWoDncflTpPuJU-XTTGyJw6Bhz9pTuczL2WtpiSTz-QBRADw7dB1stxwas6jF4OmFepgczHlmUOizM=w1280" // Your 9-panel distance vs crimes visualization
+        "https://github.com/myanramsey/my-portfolio/blob/main/public/data_crime_project/places%20vs%20crime.png?raw=true" // Your 9-panel distance vs crimes visualization
       ]
     },
     {
@@ -67,40 +67,41 @@ export const projects: Project[] = [
   leafletMapUrl: "https://jameswilcox-git.github.io/mapData/crime_map.html",
   
   gallery: [
-    "URL_TO_3D_KEPLER_VISUALIZATION",
-    "URL_TO_LEAFLET_MAP_SCREENSHOT",
-    "URL_TO_DATA_PROCESS_DIAGRAM",
-    "URL_TO_CORRELATION_MATRIX_1",
-    "URL_TO_CORRELATION_MATRIX_2",
-    "URL_TO_POI_SCATTER_PLOTS",
-    "URL_TO_REAL_ESTATE_SCATTER_PLOTS"
+    "https://github.com/myanramsey/my-portfolio/blob/main/public/data_crime_project/data_process.png?raw=true",
+    "https://github.com/myanramsey/my-portfolio/blob/main/public/data_crime_project/3d%20visualization.png?raw=true",
+    "https://github.com/myanramsey/my-portfolio/blob/main/public/data_crime_project/correlation_matrix_normalized.png?raw=true",
+    "https://github.com/myanramsey/my-portfolio/blob/main/public/data_crime_project/correlation_demographic_matrix.png?raw=true",
+    "https://github.com/myanramsey/my-portfolio/blob/main/public/data_crime_project/places%20vs%20crime.png?raw=true",
+    "https://github.com/myanramsey/my-portfolio/blob/main/public/data_crime_project/real_estate_plot.png?raw=true",
+    "https://github.com/myanramsey/my-portfolio/blob/main/public/data_crime_project/real_estate_plot.png?raw=true",
+    "https://github.com/myanramsey/my-portfolio/blob/main/public/data_crime_project/correlation_demographic_matrix.png?raw=true"
   ],
   },
 
   // ==================== ENGINEERING PROJECTS ====================
-  {
-    id: 2,
-    title: "Bloomberg Data Discovery Search",
-    category: "Engineering",
-    tags: ["NLP", "Python", "ETL", "Database Optimization", "Fuzzy Search"],
-    year: "2025",
-    shortDescription: "Advanced fuzzy search solution reducing data discovery time by 78%.",
-    fullDescription: "During my internship at Bloomberg in Princeton, NJ, I engineered an advanced fuzzy search solution leveraging NLP techniques to streamline data discovery processes for the knowledge graph platform.",
-    process: [
-      "Problem Analysis: Identified bottlenecks in the manual data discovery process that was slowing down team onboarding to Bloomberg's knowledge graph platform.",
-      "NLP Implementation: Engineered fuzzy search solution using NLP techniques and proprietary database queries to intelligently match search queries with relevant datasets.",
-      "ETL Pipeline Design: Designed and implemented scalable ETL pipelines to onboard and validate 500+ complex financial datasets into Bloomberg's semantic database, ensuring seamless integration."
-    ],
-    challenge: "Manual data discovery was extremely time-consuming, hindering team productivity and slowing down onboarding to Bloomberg's knowledge graph platform. The system needed to handle complex financial datasets while maintaining accuracy.",
-    solution: "Deployed an advanced fuzzy search solution leveraging NLP techniques that reduced manual discovery time by 78%, while implementing scalable ETL pipelines that processed 500+ complex financial datasets with seamless integration.",
-    image: "from-blue-800 to-indigo-950",
-    size: 'medium'
-  },
+  // {
+  //   id: 2,
+  //   title: "Bloomberg Data Discovery Search",
+  //   category: "Data",
+  //   tags: ["NLP", "Python", "ETL", "Database Optimization", "Fuzzy Search"],
+  //   year: "2025",
+  //   shortDescription: "Advanced fuzzy search solution reducing data discovery time by 78%.",
+  //   fullDescription: "During my internship at Bloomberg in Princeton, NJ, I engineered an advanced fuzzy search solution leveraging NLP techniques to streamline data discovery processes for the knowledge graph platform.",
+  //   process: [
+  //     "Problem Analysis: Identified bottlenecks in the manual data discovery process that was slowing down team onboarding to Bloomberg's knowledge graph platform.",
+  //     "NLP Implementation: Engineered fuzzy search solution using NLP techniques and proprietary database queries to intelligently match search queries with relevant datasets.",
+  //     "ETL Pipeline Design: Designed and implemented scalable ETL pipelines to onboard and validate 500+ complex financial datasets into Bloomberg's semantic database, ensuring seamless integration."
+  //   ],
+  //   challenge: "Manual data discovery was extremely time-consuming, hindering team productivity and slowing down onboarding to Bloomberg's knowledge graph platform. The system needed to handle complex financial datasets while maintaining accuracy.",
+  //   solution: "Deployed an advanced fuzzy search solution leveraging NLP techniques that reduced manual discovery time by 78%, while implementing scalable ETL pipelines that processed 500+ complex financial datasets with seamless integration.",
+  //   image: "from-blue-800 to-indigo-950",
+  //   size: 'medium'
+  // },
 
   {
   id: 3,
   title: "Automated Document Generation System",
-  category: "Engineering",
+  category: "Data",
   tags: ["Google Apps Script", "JavaScript", "Document Automation", "Google Docs API", "Data Processing"],
   year: "2024",
   shortDescription: "Automated compliance document generator reducing manual work by 83% and processing 1,000+ records.",
