@@ -53,30 +53,27 @@ export const projects: Project[] = [
   process: [
     {
       text: "Problem Analysis & Workflow Mapping: Identified 12-hour weekly bottleneck in manual document creation for literacy compliance reporting. Mapped existing workflow to understand data sources (Google Sheets with 1,000+ records across 5 years), required document formats (4 language variants with specific styling), and pain points (repetitive formatting, manual cross-referencing, high error potential).",
-      images: [] // No images needed for problem statement
+      images: [] 
     },
     {
       text: "System Architecture Design: Designed data pipeline connecting Google Sheets input to formatted document output. Architecture includes user input module for dynamic parameters, data extraction and transformation layer, document generation engine with conditional formatting logic, and Google Docs API integration for advanced styling. System processes multiple language variants in parallel with category-specific formatting rules.",
       images: [
-        "URL_TO_YOUR_ARCHITECTURE_DIAGRAM" // Flow diagram showing: Sheets → Script → Processing → Doc Generation → API Styling → Output
+        "https://github.com/myanramsey/my-portfolio/blob/main/public/google_script_project/systems_diagram.png?raw=true" 
       ]
     },
     {
       text: "Data Processing Pipeline: Implemented extraction system to pull records from Google Sheets with user-defined parameters. Built filtering logic to process boolean flags, reorganize columns by priority, and categorize 1,000+ records by language (English, Spanish, Braille, Haitian Creole). Created transformation functions to standardize grade codes, handle missing values, and prepare data for document insertion.",
-      images: [] // Could add a sanitized screenshot of before/after data transformation
+      images: ["https://github.com/myanramsey/my-portfolio/blob/main/public/google_script_project/Sample_table.png?raw=true"]
     },
     {
       text: "Document Generation & Formatting: Developed programmatic document creator with custom page dimensions (11\"×8.5\" landscape), precise margin control, dynamic headers/footers, and conditional footnotes per language variant. Converted data arrays into styled tables with automatic formatting. Integrated Google Docs API for pixel-perfect border control and advanced table styling unavailable in standard DocumentApp.",
       images: [
-        "URL_TO_SAMPLE_OUTPUT_PDF_PAGE1", // Your Braille-Titles-1.pdf first page
-        "URL_TO_SAMPLE_OUTPUT_PDF_PAGE2"  // Another page showing table formatting
+        "https://github.com/myanramsey/my-portfolio/blob/main/public/google_script_project/Braille%20Titles%20Final.png?raw=true"
       ]
     },
     {
       text: "Multi-Document Output & Validation: Implemented automated generation of 4 separate documents per run (one per language category), each with category-specific formatting rules and footnotes. Added data validation to filter empty rows, ensured consistent font styling (Calibri), and maintained alignment standards across all outputs. System generates document URLs for tracking and reduced workflow time from 12 hours to 2 hours weekly (83% reduction).",
-      images: [
-        "URL_TO_ALL_FOUR_DOCUMENTS_SCREENSHOT" // Screenshot showing all 4 generated docs in Google Drive
-      ]
+      images: []
     }
   ],
   
