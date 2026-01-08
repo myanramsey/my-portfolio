@@ -58,7 +58,7 @@ export const projects: Project[] = [
     {
       text: "System Architecture Design: Designed data pipeline connecting Google Sheets input to formatted document output. Architecture includes user input module for dynamic parameters, data extraction and transformation layer, document generation engine with conditional formatting logic, and Google Docs API integration for advanced styling. System processes multiple language variants in parallel with category-specific formatting rules.",
       images: [
-        "https://github.com/myanramsey/my-portfolio/blob/main/public/google_script_project/systems_diagram.png?raw=true" 
+        "https://raw.githubusercontent.com/myanramsey/my-portfolio/da231b0e04e03076ad31c54d9388c6c4e5df852a/public/google_script_project/systems_diagram.png" 
       ]
     },
     {
