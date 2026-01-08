@@ -3,22 +3,78 @@ import type { Project, TimelineItem } from '../types';
 export const projects: Project[] = [
   // ==================== DATA PROJECTS ====================
   {
-    id: 1,
-    title: "Crime Analytics Platform",
-    category: "Data",
-    tags: ["Python", "Pandas", "GeoPandas", "Data Visualization", "Real-time Analytics"],
-    year: "2024",
-    shortDescription: "Real-time crime and property data visualization platform analyzing 100,000+ data points.",
-    fullDescription: "Developed as a Research Intern at Loss Prevention Research Council, this platform provides real-time visualization and analysis of crime patterns and real estate data to support loss prevention strategies.",
-    process: [
-      "Data Collection & Processing: Processed 150K+ property records and 50K crime incidents using Pandas and GeoPandas, cleaning and normalizing data from multiple sources including police reports and real estate databases.",
-      "Geospatial Analysis: Implemented GeoPandas for spatial analysis to identify crime hotspots and correlate them with property characteristics, enabling location-based risk assessment.",
-      "Real-time Visualization: Built interactive dashboards for real-time data visualization, reducing analysis time by 30% and enabling faster decision-making for loss prevention strategies."
-    ],
-    challenge: "Handling 100,000+ real-time data points from disparate sources while maintaining performance and providing actionable insights for crime prevention and real estate analysis.",
-    solution: "Engineered an efficient data pipeline using Python, Pandas, and GeoPandas to process and visualize crime and property data in real-time, reducing analysis time by 30% and enabling data-driven loss prevention strategies.",
-    image: "from-red-700 to-orange-900", 
-    size: 'medium'
+  id: 1,
+  title: "Alachua County Crime & Real Estate Analytics Platform",
+  category: "Data",
+  tags: ["Python", "Pandas", "GeoPandas", "Leaflet.js", "Data Visualization", "Geospatial Analysis", "Census API", "Statistical Analysis"],
+  year: "2024",
+  shortDescription: "Comprehensive geospatial analytics platform analyzing 50,000+ crime incidents and 150,000+ property records to identify socioeconomic correlations and spatial patterns.",
+  
+  fullDescription: "Developed as Research Intern at Loss Prevention Research Council, this platform integrates crime data, real estate transactions, and US Census demographics to explore relationships between socioeconomic factors, points of interest proximity, and crime patterns across Alachua County. Features interactive 2D/3D visualizations, statistical correlation analysis, and advanced geospatial processing.",
+  
+  process: [
+    {
+      text: "Data Sourcing & Cleaning: Extracted 150,000+ property records from Alachua County Records (80 years of data) and 50,000+ crime incidents from public database. Converted raw .txt files to structured dataframes using Python/Pandas by cleaning whitespace, adding delimiters, and merging sales/ownership data on parcel IDs. Filtered to 5-year window (2020-2025) for temporal alignment with crime data.",
+      images: [
+        "https://lh3.googleusercontent.com/sitesv/AAzXCkcKRY5r5_dGkE892uiKCsh7ljfk2efpwR2XrDWLTfTT0SfVx_AoLN_O3LYSuBGKgV_yyrj8E4eb5zfq6ASPYZSSZXI3F2Ffdte3_re19XJd-T6mpgtEIkNOQj8tKdpumTGNohCW9pGEcBUggxDh_qhfOD7CnXMe-feLkMDMzp8hQLI_MVb-_m89EfxRwu0Etpel88N5yPXCuvet0vmhfA6zKsdxWYajvLu2CIo=w1280"
+      ]
+    },
+    {
+      text: "Geospatial Processing & Mapping: Implemented GeoPandas to process parcel geometries and coordinate transformations. Created GeoJSON files merging crime locations with property boundaries for spatial analysis. Built interactive Leaflet.js map with marker clustering to visualize 50,000+ incidents, enabling zoom-based exploration of crime patterns across neighborhoods.",
+      images: [
+        "https://lh3.googleusercontent.com/sitesv/AAzXCkePNlnqZXarR6gO723KEoxfBhf1QRn0jWONupdZH0S5aIuu1Tz_lCTZbK5BPZ9uE0k5PUTcjukNyupEtSlUxoENObf9R0FAvT80SBbACjfWaKThxlIOIV_7CQlDyqlH2fLtfxVJMdn6xBylE43Qx6dTWxnreuhcTNtzd2j6qmRIbszv7NorzclunIYmnpHXSm64GqlmwWtiGfg8zjgRzv8TEIx4zCcKfaMy=w1280"
+      ]
+    },
+    {
+      text: "Demographic Integration: Leveraged US Census Bureau API to extract ZIP code-level demographic and socioeconomic indicators including median household income, poverty rates, education levels, gender distribution, commute times, and internet access. Merged census data with real estate transactions and crime records to enable multi-dimensional correlation analysis of 12+ variables.",
+      images: [
+        "https://lh3.googleusercontent.com/sitesv/AAzXCkfQ46TneQ1ZDzYWXI2QeBO5gnQfU9a6C0dDyAgisO4z_FXzxtHc_6CTVNWnG0kkaQeTZUG0hT1eyBbeUA4ukE8np-VG7oalD-EKfwk3rV_Ug0HhAht8bP0xQ6pUP9mO5Z-gvwOZfdBhTqK9eZ9njSMIconaw8phaCN3WpcBraHcwS5CCRvIPgzJueloyl3qoKVqT2MzsAUKDcm4Yev7jhkGaHP8pMFa1YTQ12Q=w1280"
+      ]
+    },
+    {
+      text: "Statistical Correlation Analysis: Conducted comprehensive correlation analysis examining relationships between crime rates, real estate values, and socioeconomic factors. Normalized all variables for fair comparison and generated correlation matrices revealing significant patterns: income/poverty strongly negatively correlated with crime (-0.95 for poverty), male population positively correlated with crime incidents, and longer commute times associated with lower crime rates.",
+      images: [
+        "https://lh3.googleusercontent.com/sitesv/AAzXCkfSPS2h0IFyuLILWyxEMZAMQ-_efz-dNZqPJRXtssEbQEEerX1Hzt0TSAY-zLrb-p5jr8aEGkijdKM8rBkIVnONrmoGdhJjDCGILq3g7-zbby1_pRs0iP-SJmDg8AzapOv0odSRcivL3hRaeDnBFi7z8Y7mx6MFvjRgBtd8CMrIPfR9AKNmK2oCKyg4yyTryTN_LV_yA5WKES-aahxcmfm5Y37EihoMw07tKug=w1280", // Your first correlation heatmap
+        "https://lh3.googleusercontent.com/sitesv/AAzXCkc3maOdqVIMxRALtSefygPbWR1ivUwAP8-kS1thSlBvMZ7ShEidTL3EI2OesmEcCmHUQ_0-v75qOs-L9SgnR1jvP1vNelPPNhonzgHB67bnm2ypnDwh-so3364xy4x9D2TW6adi52FMNSMk6hLUXJsjTL9PHSK5MrIGciTangJQ52rxn2bl9wZXVaJSTOpAMOXXGWOhAUqMb2N5B1eHs_zppMldvT4MrsWDBxo=w1280"  // Your second simplified matrix
+      ]
+    },
+    {
+      text: "Points of Interest (POI) Analysis: Integrated OpenStreetMap data to calculate distances between properties and 20+ POI categories (universities, police stations, restaurants, banks, community centers, etc.). Analyzed spatial relationships revealing exponential decay patterns—crime incidents increase significantly near universities and outdoor seating areas, with counterintuitive finding that police station proximity correlates with higher reported crime.",
+      images: [
+        "https://lh3.googleusercontent.com/sitesv/AAzXCkd0UENWZ-nunHnWz4eKfVCK_xNJ29GLPDHIdP6sJjh2SmZK3PWaha8erAHE2t0jmWHkciDtVLBkVqBBOyhgUMRrnCmHQczLvD4sVUvtRNTXxsJOCSTTiiEronH_h10T1Ty3DDK-jyFYu1gf4t0JI2amaYWoDncflTpPuJU-XTTGyJw6Bhz9pTuczL2WtpiSTz-QBRADw7dB1stxwas6jF4OmFepgczHlmUOizM=w1280" // Your 9-panel distance vs crimes visualization
+      ]
+    },
+    {
+      text: "Real Estate Pattern Analysis: Examined relationships between property values and demographic factors (income, population, education, internet access). Created scatter plot matrices revealing weak correlations between traditional economic indicators and property values, suggesting complex market dynamics influenced by investment trends, federal interest rates, and market sentiment rather than direct socioeconomic factors.",
+      images: [
+        "https://lh3.googleusercontent.com/sitesv/AAzXCkeIk8nLOvvaKLNwz5ri0WZh90lNnOICn9ZeDlF6UNR8CS9Oh9MCHFWM4QyAl8an1UiS4uNwbNmQUnZa9ZlVeQQtv-ugvSFCQcWzViuFRom3byHW-6UY9GCyJQrFegyspOHKEYsDEpcupM9l6A8LJbtdtENcZwmsMw-wl1ytZ1q_-71w0-s2plFnfJ-9waIDvJQy-k-UyKMep8FAsxZxPmOdHPfsJz3diWr5IMo=w1280" // Your 9-panel real estate analysis
+      ]
+    },
+    {
+      text: "Interactive Visualization & Deployment: Developed public-facing website with embedded Leaflet.js map, 3D Kepler.gl crime density visualization (height and color representing incident concentration), and statistical dashboards. Optimized performance for 200K+ data points through clustering algorithms and lazy loading. Deployed on GitHub Pages and Google Sites for community accessibility.",
+      images: []
+    }
+  ],
+  
+  challenge: "Processing and integrating three disparate data sources (crime records, property transactions, census demographics) with inconsistent formats, missing values, and temporal misalignment. Standard approaches couldn't handle the scale (200K+ combined records) while maintaining performance for interactive visualization. Additionally, establishing meaningful correlations required sophisticated spatial joins and statistical analysis across multiple dimensions.",
+  
+  solution: "Engineered a multi-stage data pipeline: (1) Python/Pandas for data cleaning and transformation, (2) GeoPandas for spatial processing and coordinate normalization, (3) Census API integration for demographic enrichment, (4) Statistical correlation analysis across normalized variables, (5) Leaflet.js + Kepler.gl for interactive web visualization. Achieved 30% reduction in analysis time through optimized spatial joins and revealed significant socioeconomic patterns including strong poverty-crime correlation (-0.95) and unexpected POI proximity effects.",
+  
+  image: "from-red-700 to-orange-900",
+  size: 'medium',
+  
+  demoUrl: "https://sites.google.com/view/alachuacountycrimeproject/crime-map",
+  leafletMapUrl: "https://jameswilcox-git.github.io/mapData/crime_map.html",
+  
+  gallery: [
+    "URL_TO_3D_KEPLER_VISUALIZATION",
+    "URL_TO_LEAFLET_MAP_SCREENSHOT",
+    "URL_TO_DATA_PROCESS_DIAGRAM",
+    "URL_TO_CORRELATION_MATRIX_1",
+    "URL_TO_CORRELATION_MATRIX_2",
+    "URL_TO_POI_SCATTER_PLOTS",
+    "URL_TO_REAL_ESTATE_SCATTER_PLOTS"
+  ],
   },
 
   // ==================== ENGINEERING PROJECTS ====================
@@ -81,7 +137,7 @@ export const projects: Project[] = [
   
   solution: "Engineered end-to-end automation pipeline using Google Apps Script and Docs API that processes spreadsheet data, applies complex transformations, and generates publication-ready documents with pixel-perfect formatting. Reduced workflow time from 12 hours to 2 hours weekly (83% reduction) while ensuring consistency across all language variants and eliminating manual formatting errors.",
   
-  image: "from-emerald-700 to-teal-900", // Hero gradient
+  image: "https://raw.githubusercontent.com/myanramsey/my-portfolio/4889651e6ce765ddba00c7f77449d30ccdbd7765/public/google_script_project/front_card.png",
   size: 'medium',
   
   gallery: [

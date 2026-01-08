@@ -38,6 +38,7 @@ export interface Project {
   githubUrl?: string;
   demoUrl?: string;
   sketchfabId?: string; 
+  leafletMapUrl?: string;
   
   youtubeVideos?: { 
     id: string;
