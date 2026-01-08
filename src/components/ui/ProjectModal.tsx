@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
-import { X, Calendar, Tag, Github, ArrowUpRight, Terminal, Layers, Box } from 'lucide-react';
-import { SketchfabViewer } from '../ui/SketchfabViewer'; // 
+import { X, Calendar, Tag, Github, ArrowUpRight, Terminal, Layers, Box, Play } from 'lucide-react';
+import { SketchfabViewer } from '../ui/SketchfabViewer'; 
 import type { Project } from '../../types';
+import { YouTubeEmbed } from '../ui/YouTubeEmbed';
+
 
 interface ProjectModalProps {
   project: Project;
@@ -109,7 +111,33 @@ export const ProjectModal = ({ project, onClose }: ProjectModalProps) => {
               </div>
             </div>
           )}
-          {/* ======================================================== */}
+          {/* ==================== YOUTUBE VIDEOS SECTION ==================== */}
+            {project.youtubeVideos && project.youtubeVideos.length > 0 && (
+              <div className="space-y-6">
+                <h3 className="font-mono text-xs uppercase tracking-widest text-zinc-500 dark:text-zinc-400 flex items-center gap-2">
+                  <div className="h-px w-12 bg-zinc-300 dark:bg-zinc-700"></div>
+                  <Play size={14} />
+                  Animation Demos
+                </h3>
+                
+                {/* 2-column grid layout */}
+                <div className="grid md:grid-cols-2 gap-6">
+                  {project.youtubeVideos.map((video, idx) => (
+                    <div key={idx} className="bg-zinc-100 dark:bg-zinc-950/50 p-4 rounded-xl border border-zinc-200 dark:border-white/10">
+                      <YouTubeEmbed 
+                        videoId={video.id}
+                        title={video.title}
+                      />
+                      <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-3 font-medium">
+                        {video.title}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+            {/* ======================================================== */}
+
 
           {/* Challenge & Solution - Prominent Cards */}
           <div className="grid md:grid-cols-2 gap-6">

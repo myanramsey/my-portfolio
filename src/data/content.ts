@@ -42,23 +42,59 @@ export const projects: Project[] = [
   },
 
   {
-    id: 3,
-    title: "Automated Literacy Compliance System",
-    category: "Engineering",
-    tags: ["Python", "Google Apps Script", "JavaScript", "Automation", "Data Processing"],
-    year: "2024",
-    shortDescription: "Automated 80% of FDOE compliance reporting, processing 1,000+ literacy records.",
-    fullDescription: "Built as Student Office Assistant at Lastinger Learning Center, this automation system revolutionized compliance reporting and data entry processes.",
-    process: [
-      "Process Analysis: Analyzed existing manual workflows for FDOE/Scholastic compliance reporting and identified repetitive tasks consuming 12+ hours per week.",
-      "Python Automation: Developed Python scripts using Pandas to automate compliance reporting across 5 years of literacy data, processing 1,000+ records efficiently.",
-      "JavaScript Integration: Created JavaScript automation for Scholastic title cross-referencing, reducing manual data entry time from 12 hours to 2 hours per week (83% reduction)."
-    ],
-    challenge: "Manual compliance reporting and data entry consumed 12+ hours weekly, creating bottlenecks in processing literacy records and Scholastic title cross-referencing for 1,000+ records across 5 years.",
-    solution: "Automated 80% of FDOE/Scholastic compliance reporting using Python (Pandas) and Google Apps Script, reducing manual data entry time by 83% while ensuring accuracy across 1,000+ literacy records.",
-    image: "from-emerald-700 to-teal-900",
-    size: 'medium'
+  id: 3,
+  title: "Automated Document Generation System",
+  category: "Engineering",
+  tags: ["Google Apps Script", "JavaScript", "Document Automation", "Google Docs API", "Data Processing"],
+  year: "2024",
+  shortDescription: "Automated compliance document generator reducing manual work by 83% and processing 1,000+ records.",
+  fullDescription: "Built an intelligent document automation system that transforms spreadsheet data into professionally formatted compliance documents across multiple languages. The system handles dynamic user inputs, complex data transformations, and publication-ready formatting through Google Apps Script and Docs API integration.",
+  
+  process: [
+    {
+      text: "Problem Analysis & Workflow Mapping: Identified 12-hour weekly bottleneck in manual document creation for literacy compliance reporting. Mapped existing workflow to understand data sources (Google Sheets with 1,000+ records across 5 years), required document formats (4 language variants with specific styling), and pain points (repetitive formatting, manual cross-referencing, high error potential).",
+      images: [] // No images needed for problem statement
+    },
+    {
+      text: "System Architecture Design: Designed data pipeline connecting Google Sheets input to formatted document output. Architecture includes user input module for dynamic parameters, data extraction and transformation layer, document generation engine with conditional formatting logic, and Google Docs API integration for advanced styling. System processes multiple language variants in parallel with category-specific formatting rules.",
+      images: [
+        "URL_TO_YOUR_ARCHITECTURE_DIAGRAM" // Flow diagram showing: Sheets → Script → Processing → Doc Generation → API Styling → Output
+      ]
+    },
+    {
+      text: "Data Processing Pipeline: Implemented extraction system to pull records from Google Sheets with user-defined parameters. Built filtering logic to process boolean flags, reorganize columns by priority, and categorize 1,000+ records by language (English, Spanish, Braille, Haitian Creole). Created transformation functions to standardize grade codes, handle missing values, and prepare data for document insertion.",
+      images: [] // Could add a sanitized screenshot of before/after data transformation
+    },
+    {
+      text: "Document Generation & Formatting: Developed programmatic document creator with custom page dimensions (11\"×8.5\" landscape), precise margin control, dynamic headers/footers, and conditional footnotes per language variant. Converted data arrays into styled tables with automatic formatting. Integrated Google Docs API for pixel-perfect border control and advanced table styling unavailable in standard DocumentApp.",
+      images: [
+        "URL_TO_SAMPLE_OUTPUT_PDF_PAGE1", // Your Braille-Titles-1.pdf first page
+        "URL_TO_SAMPLE_OUTPUT_PDF_PAGE2"  // Another page showing table formatting
+      ]
+    },
+    {
+      text: "Multi-Document Output & Validation: Implemented automated generation of 4 separate documents per run (one per language category), each with category-specific formatting rules and footnotes. Added data validation to filter empty rows, ensured consistent font styling (Calibri), and maintained alignment standards across all outputs. System generates document URLs for tracking and reduced workflow time from 12 hours to 2 hours weekly (83% reduction).",
+      images: [
+        "URL_TO_ALL_FOUR_DOCUMENTS_SCREENSHOT" // Screenshot showing all 4 generated docs in Google Drive
+      ]
+    }
+  ],
+  
+  challenge: "Manual compliance document creation consumed 12+ hours weekly, requiring repetitive formatting across 4 language variants with specific styling requirements. Standard Google Apps Script DocumentApp lacked precise table border control, and processing 1,000+ records with multiple data sources created high risk of formatting inconsistencies and human error.",
+  
+  solution: "Engineered end-to-end automation pipeline using Google Apps Script and Docs API that processes spreadsheet data, applies complex transformations, and generates publication-ready documents with pixel-perfect formatting. Reduced workflow time from 12 hours to 2 hours weekly (83% reduction) while ensuring consistency across all language variants and eliminating manual formatting errors.",
+  
+  image: "from-emerald-700 to-teal-900", // Hero gradient
+  size: 'medium',
+  
+  gallery: [
+    "URL_TO_ARCHITECTURE_DIAGRAM", // Primary visual
+    "URL_TO_SAMPLE_OUTPUT_PDF_PAGE1", // Shows final formatting
+    "URL_TO_SAMPLE_OUTPUT_PDF_PAGE2", // Shows table details
+    "URL_TO_ALL_FOUR_DOCUMENTS_SCREENSHOT" // Shows scale of automation
+  ]
   },
+
 
   // ==================== DESIGN PROJECTS ====================
   {
@@ -238,21 +274,27 @@ export const projects: Project[] = [
     {
       text: "Wireframe & Topology: Built clean edge flow for all models—room furniture using box modeling with subdivision surfaces, plants using particle systems and modifiers. Maintained quad topology for proper subdivision and animation-ready meshes with deformation in mind.",
       images: [
-        "/3d-projects/room_wireframe.jpg",
-        "/3d-projects/plant_wireframe.jpg"
+        "https://github.com/myanramsey/my-portfolio/blob/main/public/art/room_wireframe.png?raw=true",
+        "https://github.com/myanramsey/my-portfolio/blob/main/public/art/plant_wireframe.png?raw=true",
+        "https://github.com/myanramsey/my-portfolio/blob/main/public/art/face_wireframe.png?raw=true"
+
       ]
     },
     {
       text: "Solid Modeling & Form: Blocked out major shapes and proportions in solid view to establish composition. Focused on readable silhouettes and balanced visual weight across all elements before adding detail. Created animation-ready rigs for character work.",
       images: [
-        "/3d-projects/room_solid.jpg"
+        "https://github.com/myanramsey/my-portfolio/blob/main/public/art/room_solid.png?raw=true",
+        "https://github.com/myanramsey/my-portfolio/blob/main/public/art/face_solid.png?raw=true",
+        "https://github.com/myanramsey/my-portfolio/blob/main/public/art/double_helix%20.png?raw=true",
+        "https://github.com/myanramsey/my-portfolio/blob/main/public/art/animation_2_solid.png?raw=true"
       ]
     },
     {
       text: "Texturing & Materials: Applied PBR materials with procedural nodes—wood grain for furniture using wave textures and color ramps, fabric using noise modifiers for subtle variation, plants with translucency for realistic leaves. Adjusted roughness and specular values for material differentiation and proper light interaction.",
       images: [
-        "/3d-projects/room_texture.jpg",
-        "/3d-projects/planr_render.jpg"
+        "https://github.com/myanramsey/my-portfolio/blob/main/public/art/room_texture.png?raw=true",
+        "https://github.com/myanramsey/my-portfolio/blob/main/public/art/face_texture.png?raw=true",
+        "https://github.com/myanramsey/my-portfolio/blob/main/public/art/animation_room_texture.png?raw=true"
       ]
     },
     {
@@ -262,8 +304,8 @@ export const projects: Project[] = [
     {
       text: "Lighting & Rendering: Implemented three-point lighting with warm area lights as key, cool fill lights for balance, and rim lights for separation. Added ambient occlusion in compositing for contact shadows. Rendered with Cycles at high samples (512+) for noise-free results. Adjusted lighting per frame for animated sequences.",
       images: [
-        "/3d-projects/room_render.jpg",
-        "/3d-projects/double_helix.jpg"
+        "https://github.com/myanramsey/my-portfolio/blob/main/public/art/room_render.png?raw=true",
+        "https://github.com/myanramsey/my-portfolio/blob/main/public/art/planr_render.png?raw=true", 
       ]
     },
     "Post-Processing & Compositing: Color graded in Blender's compositor—adjusted curves for mood, added subtle bloom on lights, increased saturation on accent colors (plants, blue rug). Applied vignetting and sharpening for final polish. For animations, rendered out image sequences and compiled in video editor with sound design."
@@ -271,14 +313,33 @@ export const projects: Project[] = [
   image: "https://github.com/myanramsey/my-portfolio/blob/main/public/art/3d_modeling_card.png?raw=true",
   size: "medium",
   sketchfabId: "36d638fca1874c5eb6bab03f81a0036d",
-  demoUrl: "https://youtu.be/GPsMEmTOAmU", // ← Your CAP3034 animation
+  youtubeVideos: [ 
+    {
+      id: "GPsMEmTOAmU",
+      title: "Group Final Animation Project"
+    },
+    {
+      id: "L_lkIK9BNjA",
+      title: "3D Walking Demo"
+    },
+    {
+      id: "y317PKpCn_I",
+      title: "3D Animation Demo"
+    },
+  ],
   gallery: [
-    "/3d-projects/room_render.jpg",
-    "/3d-projects/room_wireframe.jpg",
-    "/3d-projects/room_texture.jpg",
-    "/3d-projects/planr_render.jpg",
-    "/3d-projects/plant_wireframe.jpg",
-    "/3d-projects/double_helix.jpg"
+    "https://github.com/myanramsey/my-portfolio/blob/main/public/art/room_wireframe.png?raw=true",
+    "https://github.com/myanramsey/my-portfolio/blob/main/public/art/plant_wireframe.png?raw=true",
+    "https://github.com/myanramsey/my-portfolio/blob/main/public/art/face_wireframe.png?raw=true",
+    "https://github.com/myanramsey/my-portfolio/blob/main/public/art/room_solid.png?raw=true",
+    "https://github.com/myanramsey/my-portfolio/blob/main/public/art/face_solid.png?raw=true",
+    "https://github.com/myanramsey/my-portfolio/blob/main/public/art/double_helix%20.png?raw=true",
+    "https://github.com/myanramsey/my-portfolio/blob/main/public/art/animation_2_solid.png?raw=true",
+    "https://github.com/myanramsey/my-portfolio/blob/main/public/art/room_texture.png?raw=true",
+    "https://github.com/myanramsey/my-portfolio/blob/main/public/art/face_texture.png?raw=true",
+    "https://github.com/myanramsey/my-portfolio/blob/main/public/art/animation_room_texture.png?raw=true",
+    "https://github.com/myanramsey/my-portfolio/blob/main/public/art/room_render.png?raw=true",
+    "https://github.com/myanramsey/my-portfolio/blob/main/public/art/planr_render.png?raw=true"
     ]
   }
 ]

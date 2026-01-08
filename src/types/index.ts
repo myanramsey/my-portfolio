@@ -37,7 +37,12 @@ export interface Project {
 
   githubUrl?: string;
   demoUrl?: string;
-  sketchfabId?: string; // ← ADD THIS for 3D models
+  sketchfabId?: string; 
+  
+  youtubeVideos?: { 
+    id: string;
+    title: string;
+  }[];
   
   community?: {
     text: string;
