@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Moon, Sun, Menu, X, FileText } from 'lucide-react'; 
+import { Moon, Sun, Menu, X, FileText } from 'lucide-react';
 
 export const Navigation = () => {
   const [isDark, setIsDark] = useState(false);
@@ -22,7 +22,7 @@ export const Navigation = () => {
 
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/90 dark:bg-zinc-900/90 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      isScrolled || isMenuOpen ? 'bg-white/90 dark:bg-zinc-900/90 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
@@ -34,22 +34,22 @@ export const Navigation = () => {
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-6">
-            <a href="#work" className="text-sm hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+            <a href="#work" className="text-base text-zinc-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition-colors inline-flex items-center h-10">
               Work
             </a>
-            <a href="#journey" className="text-sm hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+            <a href="#journey" className="text-base text-zinc-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition-colors inline-flex items-center h-10">
               Journey
             </a>
-            <a href="#contact" className="text-sm hover:text-purple-600 dark:hover:text-purple-400 transition-colors">
+            <a href="#contact" className="text-base text-zinc-900 dark:text-white hover:text-purple-600 dark:hover:text-purple-400 transition-colors inline-flex items-center h-10">
               Contact
             </a>
             
             {/* Resume Button */}
             <a 
-              href="/resume.pdf" // Update with your actual resume path
+              href="https://drive.google.com/file/d/1DAzl4uGZuslIiIJsDNc1PICT1UAX-fYj/view"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 px-4 py-2 bg-purple-600 hover:bg-purple-700 dark:bg-purple-500 dark:hover:bg-purple-600 text-white text-sm font-medium rounded-lg transition-all hover:scale-105 shadow-md hover:shadow-lg"
+              className="inline-flex items-center gap-2 px-4 py-2 h-10 bg-purple-600 hover:bg-purple-700 dark:bg-purple-500 dark:hover:bg-purple-600 text-white text-base font-medium rounded-lg transition-all hover:scale-105 shadow-md hover:shadow-lg"
             >
               <FileText size={16} />
               Resume
@@ -58,7 +58,7 @@ export const Navigation = () => {
             {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors"
+              className="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-zinc-100 dark:bg-zinc-800 hover:bg-zinc-200 dark:hover:bg-zinc-700 transition-colors"
               aria-label="Toggle theme"
             >
               {isDark ? <Sun size={18} /> : <Moon size={18} />}
@@ -91,28 +91,28 @@ export const Navigation = () => {
               <a 
                 href="#work" 
                 onClick={() => setIsMenuOpen(false)}
-                className="px-4 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-lg transition-colors"
+                className="px-4 py-2 text-zinc-900 dark:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-lg transition-colors"
               >
                 Work
               </a>
               <a 
                 href="#journey"
                 onClick={() => setIsMenuOpen(false)}
-                className="px-4 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-lg transition-colors"
+                className="px-4 py-2 text-zinc-900 dark:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-lg transition-colors"
               >
                 Journey
               </a>
               <a 
                 href="#contact"
                 onClick={() => setIsMenuOpen(false)}
-                className="px-4 py-2 hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-lg transition-colors"
+                className="px-4 py-2 text-zinc-900 dark:text-white hover:bg-zinc-100 dark:hover:bg-zinc-800 rounded-lg transition-colors"
               >
                 Contact
               </a>
               
               {/* Mobile Resume Button */}
               <a 
-                href="/resume.pdf" // Update with your actual resume path
+                href="https://drive.google.com/file/d/1DAzl4uGZuslIiIJsDNc1PICT1UAX-fYj/view"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 mx-4 px-4 py-2 bg-purple-600 hover:bg-purple-700 text-white text-sm font-medium rounded-lg transition-colors"
@@ -127,3 +127,5 @@ export const Navigation = () => {
     </nav>
   );
 };
+
+export default Navigation;
