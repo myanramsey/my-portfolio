@@ -16,7 +16,7 @@ export const projects: Project[] = [
     {
       text: "Data Sourcing & Cleaning: Extracted 150,000+ property records from Alachua County Records (80 years of data) and 50,000+ crime incidents from public database. Converted raw .txt files to structured dataframes using Python/Pandas by cleaning whitespace, adding delimiters, and merging sales/ownership data on parcel IDs. Filtered to 5-year window (2020-2025) for temporal alignment with crime data.",
       images: [
-        "https://lh3.googleusercontent.com/sitesv/AAzXCkcKRY5r5_dGkE892uiKCsh7ljfk2efpwR2XrDWLTfTT0SfVx_AoLN_O3LYSuBGKgV_yyrj8E4eb5zfq6ASPYZSSZXI3F2Ffdte3_re19XJd-T6mpgtEIkNOQj8tKdpumTGNohCW9pGEcBUggxDh_qhfOD7CnXMe-feLkMDMzp8hQLI_MVb-_m89EfxRwu0Etpel88N5yPXCuvet0vmhfA6zKsdxWYajvLu2CIo=w1280"
+        "https://github.com/myanramsey/my-portfolio/blob/main/public/data_crime_project/data_process.png?raw=true"
       ]
     },
     {
@@ -47,7 +47,7 @@ export const projects: Project[] = [
     {
       text: "Real Estate Pattern Analysis: Examined relationships between property values and demographic factors (income, population, education, internet access). Created scatter plot matrices revealing weak correlations between traditional economic indicators and property values, suggesting complex market dynamics influenced by investment trends, federal interest rates, and market sentiment rather than direct socioeconomic factors.",
       images: [
-        "https://lh3.googleusercontent.com/sitesv/AAzXCkeIk8nLOvvaKLNwz5ri0WZh90lNnOICn9ZeDlF6UNR8CS9Oh9MCHFWM4QyAl8an1UiS4uNwbNmQUnZa9ZlVeQQtv-ugvSFCQcWzViuFRom3byHW-6UY9GCyJQrFegyspOHKEYsDEpcupM9l6A8LJbtdtENcZwmsMw-wl1ytZ1q_-71w0-s2plFnfJ-9waIDvJQy-k-UyKMep8FAsxZxPmOdHPfsJz3diWr5IMo=w1280" // Your 9-panel real estate analysis
+        "https://github.com/myanramsey/my-portfolio/blob/main/public/data_crime_project/real_estate_plot.png?raw=true" // Your 9-panel real estate analysis
       ]
     },
     {
@@ -60,7 +60,7 @@ export const projects: Project[] = [
   
   solution: "Engineered a multi-stage data pipeline: (1) Python/Pandas for data cleaning and transformation, (2) GeoPandas for spatial processing and coordinate normalization, (3) Census API integration for demographic enrichment, (4) Statistical correlation analysis across normalized variables, (5) Leaflet.js + Kepler.gl for interactive web visualization. Achieved 30% reduction in analysis time through optimized spatial joins and revealed significant socioeconomic patterns including strong poverty-crime correlation (-0.95) and unexpected POI proximity effects.",
   
-  image: "from-red-700 to-orange-900",
+  image: "https://github.com/myanramsey/my-portfolio/blob/main/public/data_crime_project/project_card.png?raw=true",
   size: 'medium',
   
   demoUrl: "https://sites.google.com/view/alachuacountycrimeproject/crime-map",
