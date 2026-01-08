@@ -58,7 +58,7 @@ export const projects: Project[] = [
     {
       text: "System Architecture Design: Designed data pipeline connecting Google Sheets input to formatted document output. Architecture includes user input module for dynamic parameters, data extraction and transformation layer, document generation engine with conditional formatting logic, and Google Docs API integration for advanced styling. System processes multiple language variants in parallel with category-specific formatting rules.",
       images: [
-        "https://raw.githubusercontent.com/myanramsey/my-portfolio/da231b0e04e03076ad31c54d9388c6c4e5df852a/public/google_script_project/systems_diagram.png" 
+        "https://raw.githubusercontent.com/myanramsey/my-portfolio/dc397606d98666f700edc42a9e8095102601f640/public/google_script_project/systems_diagram.png" 
       ]
     },
     {
@@ -85,10 +85,9 @@ export const projects: Project[] = [
   size: 'medium',
   
   gallery: [
-    "URL_TO_ARCHITECTURE_DIAGRAM", // Primary visual
-    "URL_TO_SAMPLE_OUTPUT_PDF_PAGE1", // Shows final formatting
-    "URL_TO_SAMPLE_OUTPUT_PDF_PAGE2", // Shows table details
-    "URL_TO_ALL_FOUR_DOCUMENTS_SCREENSHOT" // Shows scale of automation
+    "https://raw.githubusercontent.com/myanramsey/my-portfolio/dc397606d98666f700edc42a9e8095102601f640/public/google_script_project/systems_diagram.png", // Primary visual
+    "https://github.com/myanramsey/my-portfolio/blob/main/public/google_script_project/Braille%20Titles%20Final.png?raw=true", // Shows final formatting
+    "https://github.com/myanramsey/my-portfolio/blob/main/public/google_script_project/Sample_table.png?raw=true" // Shows table details
   ]
   },
 
